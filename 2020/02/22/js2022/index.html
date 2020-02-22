@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"pkt0831.github.io","root":"/","scheme":"Muse","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="7.연산자연산자(Operator)는 하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입, 지수 연산(operation) 등을 수행해 하나의 값을 만든다. 이때 연산의 대상을 피연산자(Operand)라 한다.피연산자는 값으로 평가될 수 있는 표현식이어야 한다. &#x2F;&#x2F; 산술 연산자5 * 4 &#x2F;&#x2F; -&gt; 20&#x2F;&#x2F; 문자열 연결 연산자‘My name">
+<meta property="og:type" content="article">
+<meta property="og:title" content="자바스크립트 24일 예습.">
+<meta property="og:url" content="https://pkt0831.github.io/2020/02/22/js2022/index.html">
+<meta property="og:site_name" content="pkt0831&#39;s Blog">
+<meta property="og:description" content="7.연산자연산자(Operator)는 하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입, 지수 연산(operation) 등을 수행해 하나의 값을 만든다. 이때 연산의 대상을 피연산자(Operand)라 한다.피연산자는 값으로 평가될 수 있는 표현식이어야 한다. &#x2F;&#x2F; 산술 연산자5 * 4 &#x2F;&#x2F; -&gt; 20&#x2F;&#x2F; 문자열 연결 연산자‘My name">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-22T13:35:30.000Z">
+<meta property="article:modified_time" content="2020-02-22T13:41:08.848Z">
+<meta property="article:author" content="Ki Tae Park">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://pkt0831.github.io/2020/02/22/js2022/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>자바스크립트 24일 예습. | pkt0831's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">pkt0831's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/02/22/js2022/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ki Tae Park">
+      <meta itemprop="description" content="My Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pkt0831's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          자바스크립트 24일 예습.
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-02-22 22:35:30 / Modified: 22:41:08" itemprop="dateCreated datePublished" datetime="2020-02-22T22:35:30+09:00">2020-02-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>7.연산자<br>연산자(Operator)는 하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입, 지수 연산(operation) 등을 수행해 하나의 값을 만든다. 이때 연산의 대상을 피연산자(Operand)라 한다.<br>피연산자는 값으로 평가될 수 있는 표현식이어야 한다.</p>
+<p>// 산술 연산자<br>5 * 4 // -&gt; 20<br>// 문자열 연결 연산자<br>‘My name is ‘ + ‘Lee’ // -&gt; ‘My name is Lee’<br>// 할당 연산자<br>color = ‘red’ // -&gt; ‘red’<br>// 비교 연산자<br>3 &gt; 5 // -&gt; false<br>// 논리 연산자<br>true &amp;&amp; false // -&gt; false<br>// 타입 연산자<br>typeof ‘Hi’ // -&gt; string</p>
+<p>1.산술 연산자<br>산술 연산자(Arithmetic Operator)는 피연산자를 대상으로 수학적 계산을 수행해 새로운 숫자 값을 만든다. 산술 연산이 불가능한 경우, NaN을 반환한다.<br>산술 연산자는 피연산자의 개수에 따라 이항 산술 연산자와 단항 산술 연산자로 구분할 수 있다.</p>
+<p>1.1. 이항 산술 연산자<br>이항 산술 연산자는 2개의 피연산자를 산술 연산하여 숫자 타입의 값을 만든다.<br>5 + 2; // -&gt; 7<br>5 - 2; // -&gt; 3<br>5 * 2; // -&gt; 10<br>5 / 2; // -&gt; 2.5<br>5 % 2; // -&gt; 1</p>
+<p>1.2. 단항 산술 연산자<br>단항(Unary) 산술 연산자는 1개의 피연산자를 산술 연산하여 숫자 타입의 값을 만든다. 주의할 것은 이항 산술 연산자와는 달리 증가/감소(++/–) 연산자는 피연산자의 값을 변경하는 부수 효과가 있다. 다시 말해 증가/감소 연산을 하면 피연산자의 값을 변경하는 암묵적 할당이 이루어진다.<br>단항 산술 연산자    의미                                                  부수 효과<br>++                  증가                                                    ○<br>–                  감소                                                    ○</p>
+<ul>
+<li>어떠한 효과도 없다. 음수를 양수로 반전하지도 않는다.        ✕</li>
+</ul>
+<ul>
+<li>양수를 음수로 음수를 양수로 반전한 값을 반환한다.          ✕<br>증가/감소(++/–) 연산자는 위치에 의미가 있다.</li>
+</ul>
+<p>-피연산자 앞에 위치한 전위 증가/감소 연산자(Prefix increment/decrement operator)는 먼저 피연산자의 값을 증가/감소시킨 후, 다른 연산을 수행한다.</p>
+<p>-피연산자 뒤에 위치한 후위 증가/감소 연산자(Postfix increment/decrement operator)는 먼저 다른 연산을 수행한 후, 피연산자의 값을 증가/감소시킨다.</p>
+<p>var x = 5, result;</p>
+<p>// 선할당 후증가 (Postfix increment operator)<br>result = x++;<br>console.log(result, x); // 5 6</p>
+<p>// 선증가 후할당 (Prefix increment operator)<br>result = ++x;<br>console.log(result, x); // 7 7</p>
+<p>// 선할당 후감소 (Postfix decrement operator)<br>result = x–;<br>console.log(result, x); // 7 6</p>
+<p>// 선감소 후할당 (Prefix decrement operator)<br>result = –x;<br>console.log(result, x); // 5 5</p>
+<ul>
+<li>단항 연산자는 피연산자에 어떠한 효과도 없다. 음수를 양수로 반전하지도 않는다. 그런데 숫자 타입이 아닌 피연산자에 사용하면 피연산자를 숫자 타입으로 변환하여 반환한다. 이때 피연산자를 변경하는 것은 아니고 숫자 타입으로 변환한 값을 생성해서 반환한다. 따라서 부수 효과는 없다.</li>
+</ul>
+<p>// 아무런 효과가 없다.<br>+10;    // -&gt; 10<br>+(-10); // -&gt; -10</p>
+<p>// 문자열을 숫자로 타입 변환한다.<br>+’10’; // -&gt; 10</p>
+<p>// 불리언 값을 숫자로 타입 변환한다.<br>+true; // -&gt; 1</p>
+<p>// 불리언 값을 숫자로 타입 변환한다.<br>+false; // -&gt; 0</p>
+<p>// 문자열을 숫자로 타입 변환할 수 없으므로 NaN을 반환한다.<br>+’Hello’; // -&gt; NaN</p>
+<p>– 단항 연산자는 피연산자의 부호를 반전한 값을 반환한다. + 단항 연산자와 마찬가지로 숫자 타입이 아닌 피연산자에 사용하면 피연산자를 숫자 타입으로 변환하여 반환한다. 이때 피연산자를 변경하는 것은 아니고 부호를 반전한 값을 생성해서 반환한다. 따라서 부수 효과는 없다.</p>
+<p>// 부호를 반전한다.<br>-(-10); // -&gt; 10</p>
+<p>// 문자열을 숫자로 타입 변환한다.<br>-‘10’; // -&gt; -10</p>
+<p>// 불리언 값을 숫자로 타입 변환한다.<br>-true; // -&gt; -1</p>
+<p>// 문자열을 숫자로 타입 변환할 수 없으므로 NaN을 반환한다.<br>-‘Hello’; // -&gt; NaN</p>
+<p>1.3 문자열 연결 연산자<br> 연산자는 피연산자 중 하나 이상이 문자열인 경우 문자열 연결 연산자로 동작,그외엔 덧셈 연산자로 동작한다.</p>
+<p> // 문자열 연결 연산자<br>‘1’ + 2; // -&gt; ‘12’<br>1 + ‘2’; // -&gt; ‘12’</p>
+<p>// 산술 연산자<br>1 + 2; // -&gt; 3</p>
+<p>// true는 1로 타입 변환된다.<br>1 + true; // -&gt; 2</p>
+<p>// false는 0으로 타입 변환된다.<br>1 + false; // -&gt; 1</p>
+<p>// null는 0으로 타입 변환된다.<br>1 + null; // -&gt; 1</p>
+<p>// undefined는 숫자로 타입 변환되지 않는다.<br>+undefined;    // -&gt; NaN<br>1 + undefined; // -&gt; NaN</p>
+<p>자바스크립트 엔진에 의해 암묵적으로 타입이 자동 변환되기도 한다.<br>1 + true를 연산하면 자바스크립트 엔진은 암묵적으로 불리언 타입의 값인 true를 숫자 타입인 1로 타입을 강제 변환한 후 연산을 수행한다.</p>
+<p>이를 암묵적 타입 변환(Implicit coercion) 또는 타입 강제 변환(Type coercion)이라고 한다.<br>+/- 단항 연산자도 암묵적 타입 변환이 발생한 것이다.</p>
+<p>2.할당 연산자</p>
+<p>할당 연산자(Assignment Operator)는 우항에 있는 피연산자의 평가 결과를 좌항에 있는 변수에 할당한다. 할당 연산자는 좌항의 변수에 값을 할당하므로 변수의 값이 변하는 부수 효과가 있다.</p>
+<p>할당  연산자    사례    동일 표현    부수 효과<br>=                x = 5      x = 5                ○<br>+=              x += 5    x = x + 5            ○<br>-=               x -= 5    x = x - 5            ○<br>*=              x *= 5    x = x * 5            ○<br>/=              x /= 5    x = x / 5            ○<br>%=              x %= 5    x = x % 5            ○</p>
+<p>var x;</p>
+<p>x = 10;<br>console.log(x); // 10</p>
+<p>x += 5; // x = x + 5;<br>console.log(x); // 15</p>
+<p>x -= 5; // x = x - 5;<br>console.log(x); // 10</p>
+<p>x *= 5; // x = x * 5;<br>console.log(x); // 50</p>
+<p>x /= 5; // x = x / 5;<br>console.log(x); // 10</p>
+<p>x %= 5; // x = x % 5;<br>console.log(x); // 0</p>
+<p>var str = ‘My name is ‘;</p>
+<p>// 문자열 연결 연산자<br>str += ‘Lee’; // str = str + ‘Lee’;</p>
+<p>console.log(str); // ‘My name is Lee’</p>
+<p>var x;</p>
+<p>// 할당문은 표현식인 문이다.<br>console.log(x = 10); // 10</p>
+<p>3.비교 연산자</p>
+<p>비교 연산자(Comparison Operator)는 좌항과 우항의 피연산자를 비교한 다음 그 결과를 불리언 값을 반환한다. 비교 연산자는 if 문이나 for 문과 같은 제어문의 조건식에서 주로 사용한다.</p>
+<p>3.1. 동등 / 일치 비교 연산자</p>
+<p>동등 비교(loose equality) 연산자와 일치 비교(strict equality) 연산자는 좌항과 우항의 피연산자가 같은 값을 갖는지 비교하여 불리언 값을 반환한다. 하지만 비교하는 엄격성의 정도가 다르다. 동등 비교 연산자는 느슨한 비교를 하지만 일치 비교 연산자는 엄격한 비교를 한다.</p>
+<p>비교 연산자    의미         사례          설명                 부수 효과<br>==         동등 비교         x == y    x와 y의 값이 같음            ✕<br>===         일치 비교        x === y    x와 y의 값과 타입이 같음  ✕<br>!=         부동등 비교      x != y    x와 y의 값이 다름            ✕<br>!==         불일치 비교      x !== y    x와 y의 값과 타입이 다름    ✕</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/20/js0220/" rel="prev" title="자바스크립트 21일 예습 및 복습 추가.">
+      <i class="fa fa-chevron-left"></i> 자바스크립트 21일 예습 및 복습 추가.
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ki Tae Park</p>
+  <div class="site-description" itemprop="description">My Blog</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ki Tae Park</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

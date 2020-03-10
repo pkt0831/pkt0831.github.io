@@ -27,10 +27,12 @@
 <meta property="og:site_name" content="pkt0831&#39;s Blog">
 <meta property="og:description" content="1.내부 슬롯과 내부 메소드이중 대괄호([[…]])로 감싼 이름들이 내부 슬롯과 내부 메소드이다. 외부로 공개된 객체의 프로퍼티는 아니지만 엔진 내부 로직이고 직접적으로 호출할 방법은 제공하지않으나 일부 내부 슬롯과 내부 메소드에 한하여 간접적으로 접근할 수단을 제공하기도 한다. 2.프로퍼티 어트리뷰트와 프로퍼티 디스크립터 객체-프로퍼티의 상태란 프로퍼티의">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://user-images.githubusercontent.com/56964928/76271632-74224c80-62bc-11ea-84f3-912b84ad1c2e.png">
 <meta property="article:published_time" content="2020-03-08T02:21:30.000Z">
-<meta property="article:modified_time" content="2020-03-09T13:02:41.740Z">
+<meta property="article:modified_time" content="2020-03-10T01:47:57.764Z">
 <meta property="article:author" content="Ki Tae Park">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/56964928/76271632-74224c80-62bc-11ea-84f3-912b84ad1c2e.png">
 
 <link rel="canonical" href="https://pkt0831.github.io/2020/03/08/js0308-2/">
 
@@ -175,7 +177,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-09 22:02:41" itemprop="dateModified" datetime="2020-03-09T22:02:41+09:00">2020-03-09</time>
+                <time title="Modified: 2020-03-10 10:47:57" itemprop="dateModified" datetime="2020-03-10T10:47:57+09:00">2020-03-10</time>
               </span>
 
           
@@ -222,9 +224,9 @@
 </ol>
 <p>프로퍼티   대응하는어트리뷰트        프로퍼티 누락 시의 기본값.<br>value            [[Value]]                      undefined<br>get              [[Get]]                        undefined<br>set              [[Set]]                        undefined<br>writable        [[Writable]]                   false<br>enumerable      [[Enumerable]]                 false<br>configurable    [[Configurable]]               false</p>
 <ol start="5">
-<li>객체 변경 방지<br>객체는 변경 가능한 값이므로 재할당없이 직접 변경이 가능하다. 프로퍼티를 추가 또는 삭제할 수 있고,값을 갱신할 수 있다.<br>Object.defineProperty 또는 Object.defineProperties 메소드를 사용하여 재정의할 수도 있다.</li>
+<li>객체 변경 방지<br>객체는 변경 가능한 값이므로 재할당없이 직접 변경이 가능하다. 프로퍼티를 추가 또는 삭제할 수 있고,값을 갱신할 수 있다.<br>Object.defineProperty 또는 Object.defineProperties 메소드를 사용하여 재정의할 수도 있다.<br><img src="https://user-images.githubusercontent.com/56964928/76271632-74224c80-62bc-11ea-84f3-912b84ad1c2e.png" alt="캡처_2020_03_10_10_44_52_378"></li>
+<li>1 객체 확장 금지<br>Object.preventExtensions 메소드는 객체의 확장을 금지한다. 객체 확장 금지란 프로퍼티 추가 금지를 의미한다. 즉, 확장이 금지된 객체는 프로퍼티 추가가 금지된다. 프로퍼티는 프로퍼티 동적 추가와 Object.defineProperty 메소드로 추가할 수 있다. 이 두가지 추가 방법이 모두 금지된다.</li>
 </ol>
-<p>5.1 객체 확장 금지<br>Object.preventExtensions 메소드는 객체의 확장을 금지한다. 객체 확장 금지란 프로퍼티 추가 금지를 의미한다. 즉, 확장이 금지된 객체는 프로퍼티 추가가 금지된다. 프로퍼티는 프로퍼티 동적 추가와 Object.defineProperty 메소드로 추가할 수 있다. 이 두가지 추가 방법이 모두 금지된다.</p>
 <p>확장이 금지된 객체인지 여부는 Object.isExtensible 메소드로 확인 할 수 있다.</p>
 <p>5.2 객체 밀봉<br>Object.seal 메소드는 객체를 밀봉한다. 객체 밀봉(seal)이란 프로퍼티 추가 및 삭제와 프로퍼티 어트리뷰트 재정의 금지를 의미한다. 즉, 밀봉된 객체는 읽기와 쓰기만 가능하게 된다.</p>
 <p>밀봉된 객체인지 여부는 Object.isSealed 메소드로 확인 할 수 있다.</p>

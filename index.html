@@ -708,98 +708,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/03/01/js0301/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ki Tae Park">
-      <meta itemprop="description" content="My Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="pkt0831's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/01/js0301/" class="post-title-link" itemprop="url">자바스크립트 3.1 제어문 연습 문제.</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-01 21:35:30" itemprop="dateCreated datePublished" datetime="2020-03-01T21:35:30+09:00">2020-03-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-08 19:03:23" itemprop="dateModified" datetime="2020-03-08T19:03:23+09:00">2020-03-08</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>변수 x가 10보다 크고 20보다 작을 때 변수 x를 출력하는 조건식을 완성하라.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="number">15</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 변수 x가 10보다 크고 20보다 작을 때 변수 x를 출력하는 조건식을 완성하라.</span></span><br><span class="line"><span class="keyword">if</span> (x &gt; <span class="number">10</span> &amp;&amp; x &lt; <span class="number">20</span>) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>for문을 사용하여 0부터 10미만의 정수 중에서 짝수만을 작은 수부터 출력하시오.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span> === <span class="number">0</span>) <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>for문을 사용하여 0부터 10미만의 정수 중에서 짝수만을 작은 수부터 문자열로 출력하시오.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">''</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span> === <span class="number">0</span>) str += i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(str);</span><br></pre></td></tr></table></figure></li>
-<li>for문을 사용하여 0부터 10미만의 정수 중에서 홀수만을 큰수부터 출력하시오.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">10</span>; i &lt; <span class="number">10</span>; i--) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>while문을 사용하여 0 부터 10 미만의 정수 중에서 짝수만을 작은 수부터 출력하시오.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt; <span class="number">10</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span> === <span class="number">0</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">  i++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>while문을 사용하여 0 부터 10 미만의 정수 중에서 홀수만을 큰수부터 출력하시오.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">while</span> (i &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (i % <span class="number">2</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(i);</span><br><span class="line">  i--;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>for 문을 사용하여 0부터 10미만의 정수의 합을 출력하시오.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">  sum += i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(sum);</span><br></pre></td></tr></table></figure></li>
-<li>1부터 20 미만의 정수 중에서 2 또는 3의 배수가 아닌 수의 총합을 구하시오.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">  sum = (i % <span class="number">2</span> &amp;&amp; i % <span class="number">3</span>) sum += i : sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(sum);</span><br></pre></td></tr></table></figure></li>
-<li>1부터 20 미만의 정수 중에서 2 또는 3의 배수인 수의 총합을 구하시오.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">  sum += i % <span class="number">2</span> ? (i % <span class="number">3</span> ? <span class="number">0</span> : i) : i;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(sum);</span><br></pre></td></tr></table></figure></li>
-<li>두 개의 주사위를 던졌을 때, 눈의 합이 6이 되는 모든 경우의 수를 출력하시오.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; <span class="number">7</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt; <span class="number">7</span>; j++) &#123;</span><br><span class="line">    <span class="keyword">if</span> (i + j === <span class="number">6</span>)</span><br><span class="line">      <span class="built_in">console</span>.log([i, j]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>삼각형 출력하기 - pattern 1<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> star = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; k &lt;= j; i++) &#123;</span><br><span class="line">    tree += <span class="string">'*'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  tree += <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(star);</span><br></pre></td></tr></table></figure></li>
-<li>삼각형 출력하기 - pattern 2<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> star = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; <span class="number">5</span>; j++) &#123;</span><br><span class="line">    star += i &gt; i ? <span class="string">' '</span> : <span class="string">'*'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  star += <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(star);</span><br></pre></td></tr></table></figure></li>
-<li>삼각형 출력하기 - pattern 3<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> star = <span class="string">''</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">5</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; i; j++) &#123;</span><br><span class="line">    star += <span class="string">'*'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(star);</span><br><span class="line">  star = <span class="string">''</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>삼각형 출력하기 - pattern 4<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> star = <span class="string">''</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt;= <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt;= <span class="number">5</span> - i; j++) &#123;</span><br><span class="line">    star += <span class="string">' '</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">1</span>; j &lt;= i; j++) &#123;</span><br><span class="line">    star += <span class="string">'*'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(star);</span><br><span class="line">  star = <span class="string">''</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>정삼각형 출력하기<br>*<hr>
-<hr>
-<hr>
-</li>
-</ol>
-<hr>
-<ol start="16">
-<li>역정삼각형 출력하기</li>
-</ol>
-<hr>
-<hr>
-<hr>
-<hr>
-<pre><code>*</code></pre>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/02/27/js0227/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1408,6 +1316,241 @@
   
   
 
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/02/22/js2022/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ki Tae Park">
+      <meta itemprop="description" content="My Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pkt0831's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/02/22/js2022/" class="post-title-link" itemprop="url">자바스크립트 24일 예습.</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-02-22 22:35:30" itemprop="dateCreated datePublished" datetime="2020-02-22T22:35:30+09:00">2020-02-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-24 20:41:44" itemprop="dateModified" datetime="2020-02-24T20:41:44+09:00">2020-02-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>7.연산자<br>연산자(Operator)는 하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입, 지수 연산(operation) 등을 수행해 하나의 값을 만든다. 이때 연산의 대상을 피연산자(Operand)라 한다.<br>피연산자는 값으로 평가될 수 있는 표현식이어야 한다.<br>모든 연산자는 값을 만든다. 모든 연산자 = 표현식이다.</p>
+<p>// 산술 연산자<br>5 * 4 // -&gt; 20<br>// 문자열 연결 연산자<br>‘My name is ‘ + ‘Lee’ // -&gt; ‘My name is Lee’<br>// 할당 연산자<br>color = ‘red’ // -&gt; ‘red’<br>// 비교 연산자<br>3 &gt; 5 // -&gt; false<br>// 논리 연산자<br>true &amp;&amp; false // -&gt; false<br>// 타입 연산자<br>typeof ‘Hi’ // -&gt; string</p>
+<p>1.산술 연산자<br>산술 연산자(Arithmetic Operator)는 피연산자를 대상으로 수학적 계산을 수행해 새로운 숫자 값을 만든다. 산술 연산이 불가능한 경우, NaN을 반환한다.<br>산술 연산자는 피연산자의 개수에 따라 이항 산술 연산자와 단항 산술 연산자로 구분할 수 있다.</p>
+<p>1.1. 이항 산술 연산자<br>이항 산술 연산자는 2개의 피연산자를 산술 연산하여 숫자 타입의 값을 만든다.<br>5 + 2; // -&gt; 7<br>5 - 2; // -&gt; 3<br>5 * 2; // -&gt; 10<br>5 / 2; // -&gt; 2.5<br>5 % 2; // -&gt; 1</p>
+<p>1.2. 단항 산술 연산자<br>단항(Unary) 산술 연산자는 1개의 피연산자를 산술 연산하여 숫자 타입의 값을 만든다. 주의할 것은 이항 산술 연산자와는 달리 증가/감소(++/–) 연산자는 피연산자의 값을 변경하는 부수 효과가 있다. 다시 말해 증가/감소 연산을 하면 피연산자의 값을 변경하는 암묵적 할당이 이루어진다.</p>
+<p>-피연산자 앞에 위치한 전위 증가/감소 연산자(Prefix increment/decrement operator)는 먼저 피연산자의 값을 증가/감소시킨 후, 다른 연산을 수행한다.</p>
+<p>-피연산자 뒤에 위치한 후위 증가/감소 연산자(Postfix increment/decrement operator)는 먼저 다른 연산을 수행한 후, 피연산자의 값을 증가/감소시킨다.</p>
+<p>var x = 5, result;</p>
+<p>// 선할당 후증가 (Postfix increment operator)<br>result = x++;<br>console.log(result, x); // 5 6<br>x 먼저, 후에 1증가 </p>
+<p>// 선증가 후할당 (Prefix increment operator)<br>result = ++x;<br>console.log(result, x); // 7 7</p>
+<p>// 선할당 후감소 (Postfix decrement operator)<br>result = x–;<br>console.log(result, x); // 7 6</p>
+<p>// 선감소 후할당 (Prefix decrement operator)<br>result = –x;<br>console.log(result, x); // 5 5</p>
+<ul>
+<li>단항 연산자는 피연산자에 어떠한 효과도 없다. 음수를 양수로 반전하지도 않는다. 그런데 숫자 타입이 아닌 피연산자에 사용하면 피연산자를 숫자 타입으로 변환하여 반환한다. 이때 피연산자를 변경하는 것은 아니고 숫자 타입으로 변환한 값을 생성해서 반환한다. 따라서 부수 효과는 없다.</li>
+</ul>
+<p>// 아무런 효과가 없다.<br>+10;    // -&gt; 10<br>+(-10); // -&gt; -10</p>
+<p>// 문자열을 숫자로 타입 변환한다.<br>+’10’; // -&gt; 10</p>
+<p>// 불리언 값을 숫자로 타입 변환한다.<br>+true; // -&gt; 1</p>
+<p>// 불리언 값을 숫자로 타입 변환한다.<br>+false; // -&gt; 0</p>
+<p>// 문자열을 숫자로 타입 변환할 수 없으므로 NaN을 반환한다.<br>+’Hello’; // -&gt; NaN</p>
+<p>– 단항 연산자는 피연산자의 부호를 반전한 값을 반환한다. + 단항 연산자와 마찬가지로 숫자 타입이 아닌 피연산자에 사용하면 피연산자를 숫자 타입으로 변환하여 반환한다. 이때 피연산자를 변경하는 것은 아니고 부호를 반전한 값을 생성해서 반환한다. 따라서 부수 효과는 없다.</p>
+<p>// 부호를 반전한다.<br>-(-10); // -&gt; 10</p>
+<p>// 문자열을 숫자로 타입 변환한다.<br>-‘10’; // -&gt; -10</p>
+<p>// 불리언 값을 숫자로 타입 변환한다.<br>-true; // -&gt; -1</p>
+<p>// 문자열을 숫자로 타입 변환할 수 없으므로 NaN을 반환한다.<br>-‘Hello’; // -&gt; NaN</p>
+<p>1.3 문자열 연결 연산자<br> 연산자는 피연산자 중 하나 이상이 문자열인 경우 문자열 연결 연산자로 동작,그외엔 덧셈 연산자로 동작한다.</p>
+<p> // 문자열 연결 연산자<br>‘1’ + 2; // -&gt; ‘12’<br>1 + ‘2’; // -&gt; ‘12’</p>
+<p>// 산술 연산자<br>1 + 2; // -&gt; 3</p>
+<p>// true는 1로 타입 변환된다.<br>1 + true; // -&gt; 2</p>
+<p>// false는 0으로 타입 변환된다.<br>1 + false; // -&gt; 1</p>
+<p>// null는 0으로 타입 변환된다.<br>1 + null; // -&gt; 1</p>
+<p>// undefined는 숫자로 타입 변환되지 않는다.<br>+undefined;    // -&gt; NaN<br>1 + undefined; // -&gt; NaN</p>
+<p>자바스크립트 엔진에 의해 암묵적으로 타입이 자동 변환되기도 한다.<br>1 + true를 연산하면 자바스크립트 엔진은 암묵적으로 불리언 타입의 값인 true를 숫자 타입인 1로 타입을 강제 변환한 후 연산을 수행한다.</p>
+<p>이를 암묵적 타입 변환(Implicit coercion) 또는 타입 강제 변환(Type coercion)이라고 한다.<br>+/- 단항 연산자도 암묵적 타입 변환이 발생한 것이다.</p>
+<p>2.할당 연산자</p>
+<p>할당 연산자(Assignment Operator)는 우항에 있는 피연산자의 평가 결과를 좌항에 있는 변수에 할당한다. 할당 연산자는 좌항의 변수에 값을 할당하므로 변수의 값이 변하는 부수 효과가 있다.</p>
+<p>var x;</p>
+<p>x = 10;<br>console.log(x); // 10</p>
+<p>x += 5; // x = x + 5;<br>console.log(x); // 15</p>
+<p>x -= 5; // x = x - 5;<br>console.log(x); // 10</p>
+<p>x *= 5; // x = x * 5;<br>console.log(x); // 50</p>
+<p>x /= 5; // x = x / 5;<br>console.log(x); // 10</p>
+<p>x %= 5; // x = x % 5;<br>console.log(x); // 0</p>
+<p>var str = ‘My name is ‘;</p>
+<p>// 문자열 연결 연산자<br>str += ‘Lee’; // str = str + ‘Lee’;</p>
+<p>console.log(str); // ‘My name is Lee’</p>
+<p>var x;</p>
+<p>// 할당문은 표현식인 문이다.<br>console.log(x = 10); // 10</p>
+<p>3.비교 연산자</p>
+<p>비교 연산자(Comparison Operator)는 좌항과 우항의 피연산자를 비교한 다음 그 결과를 불리언 값을 반환한다. 비교 연산자는 if 문이나 for 문과 같은 제어문의 조건식에서 주로 사용한다.</p>
+<p>3.1. 동등 / 일치 비교 연산자</p>
+<p>동등 비교(loose equality) 연산자와 일치 비교(strict equality) 연산자는 좌항과 우항의 피연산자가 같은 값을 갖는지 비교하여 불리언 값을 반환한다. 하지만 비교하는 엄격성의 정도가 다르다. 동등 비교 연산자는 느슨한 비교를 하지만 일치 비교 연산자는 엄격한 비교를 한다.</p>
+<p>등 비교(==) 연산자는 좌항과 우항의 피연산자를 비교할 때 먼저 암묵적 타입 변환을 통해 타입을 일치시킨 후, 같은 값인지 비교한다. 따라서 동등 비교 연산자는 좌항과 우항의 피연산자가 타입은 다르더라도 암묵적 타입 변환 후에 같은 값일 수 있다면 true를 반환한다.</p>
+<p>// 동등 비교<br>5 == 5; // -&gt; true</p>
+<p>// 타입은 다르지만 암묵적 타입 변환을 통해 타입을 일치시키면 동등하다.<br>5 == ‘5’; // -&gt; true</p>
+<p>동등 비교 연산자는 편리한 경우도 있지만 결과를 예측하기 어렵기 때문에 부작용을 일으킬 수 있으므로 사용하지 않는 편이 좋다.</p>
+<p>// 동등 비교. 결과를 예측하기 어렵다.<br>‘0’ == ‘’; // -&gt; false<br>0 == ‘’;   // -&gt; true<br>0 == ‘0’;  // -&gt; true<br>false == ‘false’;   // -&gt; false<br>false == ‘0’;       // -&gt; true<br>false == null;      // -&gt; false<br>false == undefined; // -&gt; false</p>
+<p>동등 비교(==) 연산자는 예측하기 어려운 결과를 만들어낸다.<br>일치 비교(===) 연산자는 좌항과 우항의 피연산자가 타입도 같고 값도 같은 경우에 한하여 true를 반환한다. 다시 말해 암묵적 타입 변환을 하지 않고 값을 비교한다.<br>=== 쓰면 타입도 같고 값도 같아야한다.그래서 3개짜리를 써야한다. ==개는 타입을 암묵적으로 변환시키기 때문에 쓰지 말아야한다.</p>
+<p>// 일치 비교<br>5 === 5; // -&gt; true</p>
+<p>// 암묵적 타입 변환을 하지 않고 값을 비교한다.<br>// 즉, 값과 타입이 모두 같은 경우만 true를 반환한다.<br>5 === ‘5’; // -&gt; false</p>
+<p>// NaN은 자신과 일치하지 않는 유일한 값이다.NaN은 숫자 타입이다.<br>NaN === NaN; // -&gt; false</p>
+<p>NaN은 자신과 일치하지 않는 유일한 값이다. 따라서 숫자가 NaN인지 조사하려면 빌트인 함수 isNaN을 사용한다.</p>
+<p>// 빌트인 함수 isNaN은 주어진 값이 NaN인지 체크하고 그 결과를 반환한다.<br>isNaN(NaN); // -&gt; true<br>isNaN(10);  // -&gt; false<br>isNaN(1 + undefined); // -&gt; true</p>
+<p>자바스크립트에는 양의 0과 음의 0이 있는데 이들을 비교하면 true를 반환한다.<br>// 양의 0과 음의 0의 비교. 일치 비교/동등 비교 모두 true이다.<br>0 === -0; // -&gt; true<br>0 == -0;  // -&gt; true<br>0과 -0을 비교하려면 object.js를 써야한다.</p>
+<p>-0 === +0;         // -&gt; true<br>Object.is(-0, +0); // -&gt; false</p>
+<p>NaN === NaN;         // -&gt; false<br>Object.is(NaN, NaN); // -&gt; true</p>
+<p>부동등 비교 연산자(!=)와 불일치 비교 연산자(!==)는 동등 비교(==) 연산자와 일치 비교(===) 연산자의 반대 개념이다.</p>
+<p>// 부동등 비교<br>5 != 8;   // -&gt; true<br>5 != 5;   // -&gt; false<br>5 != ‘5’; // -&gt; false</p>
+<p>// 불일치 비교<br>5 !== 8;   // -&gt; true<br>5 !== 5;   // -&gt; false<br>5 !== ‘5’; // -&gt; true</p>
+<p>3.2. 대소 관계 비교 연산자<br>대소 관계 비교 연산자는 피연산자의 크기를 비교하여 불리언 값을 반환한다.</p>
+<p>// 대소 관계 비교<br>5 &gt; 0;  // -&gt; true<br>5 &gt; 5;  // -&gt; false<br>5 &gt;= 5; // -&gt; true<br>5 &lt;= 5; // -&gt; true</p>
+<ol start="4">
+<li>삼항 조건 연산자<br>삼항 조건 연산자(ternary operator)는 조건식의 평가 결과에 따라 반환할 값을 결정한다.</li>
+</ol>
+<p>조건식 ? 조건식이 true일때 반환할 값 : 조건식이 false일때 반환할 값</p>
+<p>물음표(?) 앞의 첫번째 피연산자는 조건식, 즉 불리언 타입의 값으로 평가될 표현식이다. 만약 조건식의 평가 결과가 불리언 값이 아니면 불리언 값으로 암묵적 타입 변환된다. 이때 조건식이 참이면 콜론(:) 앞의 두번째 피연산자가 평가되어 반환되고, 거짓이면 콜론(:) 뒤의 세번째 피연산자가 평가되어 반환된다.</p>
+<p>var x = 2;</p>
+<p>// 2 % 2는 0이고 0은 false로 암묵적 타입 변환된다.<br>var result = x % 2 ? ‘홀수’ : ‘짝수’;</p>
+<p>console.log(result); // 짝수</p>
+<p>삼항 조건 연산자는 다음 장에서 살펴볼 if…else 문을 사용해도 동일한 처리를 할 수 있다.</p>
+<p>var x = 2, result;</p>
+<p>// 2 % 2는 0이고 0은 false로 암묵적 타입 변환된다.<br>if (x % 2) result = ‘홀수’;<br>else       result = ‘짝수’;</p>
+<p>console.log(result); // 짝수</p>
+<p>하지만 if…else 문은 표현식이 아닌 문이다. 따라서 if…else 문은 값처럼 사용할 수 없다.</p>
+<p>var x = 10;</p>
+<p>// if…else 문은 표현식이 아닌 문이다. 따라서 값처럼 사용할 수 없다.<br>var result = if (x % 2) { result = ‘홀수’; } else { result = ‘짝수’; };<br>// SyntaxError: Unexpected token if</p>
+<p>삼항 조건 연산자 표현식은 값으로 평가할 수 있는 표현식인 문이다. 따라서 삼항 조건 연산자식은 값처럼 다른 표현식의 일부가 될 수 있어 매우 유용하다.</p>
+<p>var x = 10;</p>
+<p>// 삼항 연산자 표현식은 표현식인 문이다. 따라서 값처럼 사용할 수 있다.<br>var result = x % 2 ? ‘홀수’ : ‘짝수’;<br>console.log(result); // 짝수<br>if문의 대용품으로 쓰여짐.if로 쓰면 좋을지 삼황연산자로 쓰면 좋을지 고민해야된다.<br>x % 2(조건) true로 평가되면 ‘홀수’가 평가된다.</p>
+<p>조건에 따라 어떤 값을 결정해야 한다면 if…else 문보다 삼항 조건 연산자 표현식을 사용하는 것이 유리하다. 하지만 조건에 따라 수행해야 할 문이 하나가 아니라 여러 개라면 if…else 문이 보다 가독성이 좋다.</p>
+<p>5.논리 연산자</p>
+<p>논리 연산자(Logical Operator)는 우항과 좌항의 피연산자(부정 논리 연산자의 경우, 우항의 피연산자)를 논리 연산한다.<br>논리 부정(!) 연산자는 언제나 불리언 값을 반환한다. 단, 피연산자가 반드시 불리언 값일 필요는 없다. 만약 피연산자가 불리언 값이 아니면 불리언 타입으로 암묵적 타입 변환된다.<br>논리합(||) 또는 논리곱(&amp;&amp;) 연산자 표현식의 평가 결과는 불리언 값이 아닐 수도 있다. 논리합(||) 또는 논리곱(&amp;&amp;) 연산자 표현식은 언제나 2개의 피연산자 중 어는 한쪽으로 평가된다.</p>
+<ol start="6">
+<li>쉼표 연산자<br>쉼표(,) 연산자는 왼쪽 피연산자부터 차례대로 피연산자를 평가하고 마지막 피연산자의 평가가 끝나면 마지막 피연산자의 평가 결과를 반환한다.<br>var x, y, z;</li>
+</ol>
+<p>x = 1, y = 2, z = 3; // 3</p>
+<ol start="7">
+<li>그룹 연산자</li>
+</ol>
+<p>10 * 2 + 3; // -&gt; 23</p>
+<p>// 그룹 연산자를 사용하여 우선 순위 조절<br>10 * (2 + 3); // -&gt; 50</p>
+<p>8.typeof 연산자</p>
+<p>ypeof 연산자는 피연산자의 데이터 타입을 문자열로 반환한다. typeof 연산자는 7가지 문자열 “string”, “number”, “boolean”, “undefined”, “symbol”, “object”, “function” 중 하나를 반환한다. “null”을 반환하는 경우는 없으며 함수의 경우 “function”을 반환한다. 이처럼 typeof 연산자가 반환하는 문자열은 7개의 데이터 타입과 정확히 일치하지는 않는다.</p>
+<p>typeof 연산자로 null 값을 연산해 보면 “null”이 아닌 “object”를 반환하는 것에 주의, null 타입을 확인할 때는 typeof 연산자를 사용하지 말고 일치 연산자(===)를 사용하자.<br>선언하지 않은 식별자를 typeof 연산자로 연산해 보면 ReferenceError가 발생하지 않고 “undefined”를 반환한다.</p>
+<p>9.지수 연산자<br>ES7에서 새롭게 도입된 지수 연산자는 좌항의 피연산자를 밑으로, 우항의 피연산자를 지수로 거듭 제곱하여 숫자 타입의 값을 반환한다.</p>
+<p>2 ** 2;   // -&gt; 4<br>2 ** 2.5; // -&gt; 5.65685424949238<br>2 ** 0;   // -&gt; 1<br>2 ** -2;  // -&gt; 0.25</p>
+<p>음수를 거듭제곱의 밑으로 계산하려면 아래와 같이 괄호로 묶어야 한다.</p>
+<p>-5 ** 2;<br>// -&gt; SyntaxError<br>(-5) ** 2; // -&gt; 25</p>
+<p>지수 연산자는 다른 산술 연산자와 마찬가지로 할당 연산자와 함께 사용할 수 있다.<br>var num = 5;<br>num **= 2; // -&gt; 25</p>
+<p>지수 연산자는 모든 이항 연산자보다 우선 순위가 높다.<br>2 * 5 ** 2; // -&gt; 50</p>
+<ol start="10">
+<li>연산자의 부수 효과</li>
+</ol>
+<p>대부분의 연산자는 다른 코드에 영향을 주지 않는다. 예를 들어, 1 * 2는 다른 코드에 어떠한 영향도 주지 않는다. 하지만 일부 연산자는 다른 코드에 영향을 주는 부수 효과(side effect)가 있다.</p>
+<p>부수 효과과 있는 연산자는 할당(=) 연산자, 증가/감소(++/–) 연산자, delete 연산자이다.</p>
+<p>var x;</p>
+<p>// 할당 연산자는 변수 값이 변하는 부수 효과가 있다.<br>// 이는 변수 x를 사용하는 다른 코드에 영향을 준다.<br>x = 1;<br>console.log(x); // 1</p>
+<p>// 증가/감소(++/–) 연산자는 피연산자의 값을 변경하는 부수 효과가 있다.<br>// 피연산자 x의 값이 변경된다. 이는 변수 x를 사용하는 다른 코드에 영향을 준다.<br>x++;<br>console.log(x); // 2</p>
+<p>var o = { a: 1 };</p>
+<p>// delete 연산자는 객체의 프로퍼티를 삭제하는 부수 효과가 있다.<br>// 이는 객체 o를 사용하는 다른 코드에 영향을 준다.<br>delete o.a;<br>console.log(o); // {}</p>
+<p>8.제어문</p>
+<p>제어문(Control flow statement)은 주어진 조건에 따라 코드 블록을 실행(조건문)하거나 반복 실행(반복문)할 때 사용한다. 일반적으로 코드는 위에서 아래 방향으로 순차적으로 실행된다. 제어문을 사용하면 코드의 실행 흐름을 인위적으로 제어할 수 있다.<br>let,const로 만들면 유효범위가 생김.</p>
+<ol>
+<li>블록문</li>
+</ol>
+<p>블록문(Block statement/Compound statement)는 0개 이상의 문을 중괄호로 묶은 것으로 코드 블록 또는 블록이라고 부르기도 한다. 자바스크립트는 블록문을 하나의 실행 단위로 취급한다.</p>
+<p>블록문의 끝에는 세미콜론을 붙이지 않는다.js 에선 블록문을 스코프로 인정하지않는다.여러문을 하나로 묶는 역할을 함.</p>
+<p>// 블록문<br>{<br>  var foo = 10;<br>  console.log(foo);<br>}</p>
+<p>// 제어문<br>var x = 0;<br>while (x &lt; 10) {<br>  x++;<br>}<br>console.log(x); // 10</p>
+<p>// 함수 선언문<br>function sum(a, b) {<br>  return a + b;<br>}<br>console.log(sum(1, 2)); // 3</p>
+<ol start="2">
+<li>조건문</li>
+</ol>
+<p>조건문(conditional statement)은 주어진 조건식(conditional expression)의 평가 결과에 따라 코드 블럭(블록문)의 실행을 결정한다. 조건식은 불리언 값으로 평가될 수 있는 표현식이다.</p>
+<p>2.1 if..else 문</p>
+<p>주어진 조건식(불리언 값으로 평가될 수 있는 표현식)의 평가 결과, 즉 논리적 참 또는 거짓에 따라 실행할 코드 블록을 결정한다. 조건식의 평가 결과가 참(true)일 경우, if 문 다음의 코드 블록이 실행되고 거짓(false)일 경우, else 문 다음의 코드 블록이 실행된다.</p>
+<p>if (조건식) {<br>  // 조건식이 참이면 이 코드 블록이 실행된다.<br>} else {<br>  // 조건식이 거짓이면 이 코드 블록이 실행된다.<br>}</p>
+<p>if 문의 조건식은 불리언 값으로 평가되어야 한다. 만약 if 문의 조건식이 불리언 값이 아닌 값으로 평가되면 자바스크립트 엔진에 의해 암묵적으로 데이터 타입이 불리언 값으로 강제 변환되어 실행할 코드 블록을 결정한다.</p>
+<p>조건식을 추가하여 조건에 따라 실행될 코드 블록을 늘리고 싶으면 else if 문을 사용한다.<br>if (조건식1) {<br>  // 조건식1이 참이면 이 코드 블록이 실행된다.<br>} else if (조건식2) {<br>  // 조건식2이 참이면 이 코드 블록이 실행된다.<br>} else {<br>  // 조건식1과 조건식2가 모두 거짓이면 이 코드 블록이 실행된다.<br>}</p>
+<p>else if 문과 else 문은 옵션이다. 즉, 사용할 수도 있고 사용하지 않을 수도 있다. if 문과 else 문은 2번 이상 사용할 수 없지만 else if 문은 여러 번 사용할 수 있다.</p>
+<p>var num = 2;<br>var kind;</p>
+<p>// if 문<br>if (num &gt; 0) {<br>  kind = ‘양수’; // 음수를 구별할 수 없다<br>}<br>console.log(kind); // 양수</p>
+<p>// if…else 문<br>if (num &gt; 0) {<br>  kind = ‘양수’;<br>} else {<br>  kind = ‘음수’; // 0은 음수가 아니다.<br>}<br>console.log(kind); // 양수</p>
+<p>// if…else if 문<br>if (num &gt; 0) {<br>  kind = ‘양수’;<br>} else if (num &lt; 0) {<br>  kind = ‘음수’;<br>} else {<br>  kind = ‘영’;<br>}<br>console.log(kind); // 양수</p>
+<p>만약 코드 블록 내의 문이 하나뿐이라면 중괄호를 생략할 수 있다.</p>
+<p>var num = 2;<br>var kind;</p>
+<p>if (num &gt; 0)      kind = ‘양수’;<br>else if (num &lt; 0) kind = ‘음수’;<br>else              kind = ‘영’;</p>
+<p>console.log(kind); // 양수</p>
+<p>대부분의 if…else 문은 삼항 조건 연산자로 바꿔 쓸 수 있다.<br>// x가 짝수이면 문자열 ‘짝수’를 반환하고 홀수이면 문자열 ‘홀수’를 반환한다.<br>var x = 2;<br>var result;</p>
+<p>if (x % 2) { // 2 % 2는 0이다. 이때 0은 false로 암묵적 강제 변환된다.<br>  result = ‘홀수’;<br>} else {<br>  result = ‘짝수’;<br>}</p>
+<p>console.log(result); // 짝수</p>
+<p>두가지 경우의 수(‘홀수’ 또는 ‘짝수’)를 갖는 경우이다. 만약 세가지 경우의 수(양수, 음수, 영)를 갖는 경우는 아래와 같이 바꿔 쓸 수 있다.</p>
+<p>// x가 짝수이면 문자열 ‘짝수’를 반환하고 홀수이면 문자열 ‘홀수’를 반환한다.<br>var x = 2;</p>
+<p>// 0은 false로 취급된다.<br>var result = x % 2 ? ‘홀수’ : ‘짝수’;</p>
+<p>console.log(result); // 짝수</p>
+<p>num &gt; 0 ? ‘양수’ : ‘음수’는 표현식이다. 즉, 삼항 연산자는 값으로 평가되는 표현식을 만든다. 하지만 if…else 문은 표현식이 아닌 문이다. 따라서 삼항 조건 연산자 표현식은 값처럼 사용할 수 있기 때문에 변수에 할당할 수 있다. 하지만 if…else 문은 값처럼 사용할 수 없기 때문에 변수에 할당할 수 없다는 차이가 있다.</p>
+<p>2.2. switch 문</p>
+<p>switch (표현식) {<br>  case 표현식1:<br>    switch 문의 표현식과 표현식1이 일치하면 실행될 문;<br>    break;<br>  case 표현식2:<br>    switch 문의 표현식과 표현식2가 일치하면 실행될 문;<br>    break;<br>  default:<br>    switch 문의 표현식과 일치하는 표현식을 갖는 case 문이 없을 때 실행될 문;<br>}</p>
+<p>if…else 문의 조건식은 반드시 불리언 값으로 평가되지만 switch 문의 표현식은 불리언 값보다는 문자열, 숫자 값인 경우가 많다. if…else 문은 논리적 참, 거짓으로 실행할 코드 블록을 결정한다. switch 문은 논리적 참, 거짓보다는 다양한 상황(case)에 따라 실행할 코드 블록을 결정할 때 사용한다.</p>
+<p>3.반복문</p>
+<p>반복문(Loop statement)은 주어진 조건식의 평가 결과가 참인 경우 코드 블럭을 실행한다. 그 후 조건식을 다시 검사하여 여전히 참인 경우 코드 블록을 다시 실행한다. 이는 조건식이 거짓일 때까지 반복된다.</p>
+<p>자바스크립트는 3가지의 반복문 for 문, while 문, do…while 문을 제공한다.</p>
+<p>3.1 for 문<br>for 문은 조건식이 거짓으로 판별될 때까지 코드 블록을 반복 실행한다.</p>
+<p>3.2 while 문<br>while 문은 주어진 조건식의 평가 결과가 참이면 코드 블록을 계속해서 반복 실행한다. 조건문의 평가 결과가 거짓이 되면 실행을 종료한다. 만약 조건식의 평가 결과가 불리언 값이 아니면 불리언 값으로 강제 변환되어 논리적 참, 거짓을 구별한다</p>
+<p>3.3. do…while 문<br>do…while 문은 코드 블록을 먼저 실행하고 조건식을 평가한다. 따라서 코드 블록은 무조건 한번 이상 실행된다.</p>
+<ol start="4">
+<li><p>break 문<br>break 문은 코드 블록을 탈출한다. break는 while,for,switch 문에만 쓰인다.</p>
+</li>
+<li><p>continue 문<br>ntinue 문은 반복문의 코드 블록 실행을 현 지점에서 중단하고 반복문의 증감식으로 이동한다. break 문처럼 반복문을 탈출하지는 않는다.</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
   </div>
 
   
@@ -1478,7 +1621,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

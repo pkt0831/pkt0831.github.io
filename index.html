@@ -166,10 +166,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-03-14 11:35:30 / Modified: 23:45:56" itemprop="dateCreated datePublished" datetime="2020-03-14T11:35:30+09:00">2020-03-14</time>
+              <time title="Created: 2020-03-14 11:35:30" itemprop="dateCreated datePublished" datetime="2020-03-14T11:35:30+09:00">2020-03-14</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-03-15 23:09:35" itemprop="dateModified" datetime="2020-03-15T23:09:35+09:00">2020-03-15</time>
+              </span>
 
           
 
@@ -183,7 +189,40 @@
 
       
           <ol>
-<li>strict mode란?</li>
+<li>strict mode란?<br>strict mode는 자바스크립트 언어의 문법을 보다 엄격히 적용하여 기존에는 무시되던<br>오류를 발생시킬 가능성이 높거나 자바스크립트 엔진의 최적화 작업에 문제를 일으킬 수 있는 코드에 대해 명시적인 에러를 발생시킨다.<br>-모드1-<ol start="2">
+<li>strict mode의 적용<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"> 'use strict'</span>; <span class="comment">//함수 몸체 선두에 'use strict';를 추가하면 스크립트 전체에 strict mode가 적용된다.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  x = <span class="number">10</span>; <span class="comment">// ReferenceError: x is not defined</span></span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;   <span class="comment">//함수 몸체의 선두에 추가하면 해당 함수와 중첩된 내부 함수에 strict mode가 적용된다.</span></span><br><span class="line"><span class="meta">  'use strict'</span>;</span><br><span class="line"></span><br><span class="line">  x = <span class="number">10</span>; <span class="comment">// ReferenceError: x is not defined</span></span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;    <span class="comment">//코드의 선두에 strict mode를 위치시키지 않으면 제대로 동작하지 않는다.</span></span><br><span class="line">  x = <span class="number">10</span>; <span class="comment">// 에러를 발생시키지 않는다.</span></span><br><span class="line"><span class="meta">  'use strict'</span>;</span><br><span class="line">&#125;</span><br><span class="line">foo();</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>전역에 strict mode를 적용하는 것은 피하자.<br>전역에 적용한 strict mode는 스크립트 단위로 적용되어 다른 스크립트엔 영향을 주지않고 자신의 스크립트에 한정되어 적용되기때문에 다른 스크립트는 래퍼런스 에러가난다.<br>대신, 즉시 실행 함수로 스크립트 전체를 감사써 스코프를 구분하고 즉시 실행 함수의 선두에 strict mode를 적용한다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 즉시 실행 함수의 선두에 strict mode 적용</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Do something...</span></span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure></li>
+<li>함수 단위로 strict mode를 적용하는 것도 피하자.<br>모든 함수에 일일이 strict mode를 적용하는 것은 번거로운 일이기에 strict mode는 즉시 실행 함수로 감싼 스크립트 단위로 적용하는 것이 바람직하다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// non-strict mode</span></span><br><span class="line">  <span class="keyword">var</span> lеt = <span class="number">10</span>; <span class="comment">// 에러가 발생하지 않는다.</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">    'use strict'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> = <span class="number">20</span>; <span class="comment">// SyntaxError: Unexpected strict mode reserved word</span></span><br><span class="line">  &#125;</span><br><span class="line">  foo();</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure></li>
+<li>strict mode가 발생시키는 에러</li>
+<li><ol>
+<li>암묵적 전역<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">선언하지 않은 변수를 참조하면 <span class="built_in">ReferenceError</span>가 발생한다.</span><br><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span>;</span><br><span class="line"></span><br><span class="line">  x = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(x); <span class="comment">// ReferenceError: x is not defined</span></span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>변수, 함수, 매개변수의 삭제<br>delete 연산자로 변수, 함수, 매개변수를 삭제하면 SyntaxError가 발생한다.</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>매개변수 이름의 중복<br>중복된 함수 매개변수 이름을 사용하면 SyntaxError가 발생한다.</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>with 문의 사용<br>with 문을 사용하면 SyntaxError가 발생한다.</li>
+</ol>
+</li>
+<li>strict mode 적용에 의한 변화</li>
+<li><ol>
+<li>일반 함수의 this<br>strict mode 에서 함수를 일반 함수로서 호출하면 this에 undefined가 바인딩된다. 생성자 함수가 아닌 일반 함수 내부에서는 this를 사용할 필요가 없기 때문이다. 이때 에러는 발생하지 않는다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// undefined</span></span><br><span class="line">  &#125;</span><br><span class="line">  foo();</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>); <span class="comment">// Foo</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">new</span> Foo();</span><br><span class="line">&#125;());</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>arguments 객체<br>strict mode 에서는 매개변수에 전달된 인수를 재할당하여 변경하여도 arguments 객체에 반영되지 않는다.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">a</span>) </span>&#123;</span><br><span class="line"><span class="meta">  'use strict'</span>;</span><br><span class="line">  <span class="comment">// 매개변수에 전달된 인수를 재할당하여 변경</span></span><br><span class="line">  a = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 변경된 인수가 arguments 객체에 반영되지 않는다.</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>); <span class="comment">// &#123; 0: 1, length: 1 &#125;</span></span><br><span class="line">&#125;(<span class="number">1</span>));</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
 </ol>
 
       

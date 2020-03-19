@@ -337,7 +337,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-19 23:39:39" itemprop="dateModified" datetime="2020-03-19T23:39:39+09:00">2020-03-19</time>
+                <time title="Modified: 2020-03-19 23:50:03" itemprop="dateModified" datetime="2020-03-19T23:50:03+09:00">2020-03-19</time>
               </span>
 
           
@@ -351,7 +351,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>함수의 구분.<br>-함수는 일반적인 함수로서 호출,new 연산자와 함께 호출하여 인스턴스를 생성할 수 있는 생성자 함수로서 호출, 객체에 바인딩되어 메소드로서 호출이 있다.<br>-호출할 수 있는 함수 객체를 callable,인스턴스를 생성할 수 있는 함수 객체를 constructor, 인스턴스를 생성할 수 없는 함수 객체를 있는 non-constructor라고 부른다.</p>
+          <p>함수의 구분.<br>-함수는 일반적인 함수로서 호출,new 연산자와 함께 호출하여 인스턴스를 생성할 수 있는 생성자 함수로서 호출, 객체에 바인딩되어 메소드로서 호출이 있다.<br>-호출할 수 있는 함수 객체를 callable,인스턴스를 생성할 수 있는 함수 객체를 constructor, 인스턴스를 생성할 수 없는 함수 객체를 있는 non-constructor라고 부른다.<br>-일반 함수는 constructor이지만 ES6의 메소드와 화살표 함수는 non-constructor이다.</p>
+<p>메소드<br>-ES6 사양에서 메소드는 메소드 축약 표현으로 정의된 함수 만을 의미한다.<br>-메소드(이하 ES6 메소드)는 인스턴스를 생성할 없는 non-constructor이다. 따라서 ES6 메소드는 생성자 함수로서 호출할 수 없다.<br>-ES6 메소드는 인스턴스를 생성할 수 없으므로 prototype 프로퍼티가 없고 프로토타입도 생성하지 않는다.</p>
+<ul>
+<li>표준 빌드인 객체의 메소드는 모두 non-constructor이다.</li>
+<li>ES6 메소드는 메소드가 바인딩된 객체를 가리키는 내부 슬롯 [[HomeObject]]를 갖고있는데 이러한 매소들만이 super키워드를 사용할 수 있다.</li>
+</ul>
+<p>화살표 함수.</p>
 
       
     </div>

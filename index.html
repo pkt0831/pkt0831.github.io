@@ -143,6 +143,82 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/03/26/js0326/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ki Tae Park">
+      <meta itemprop="description" content="My Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pkt0831's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/03/26/js0326/" class="post-title-link" itemprop="url">수학 상수와 함수를 위한 Math 객체</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-03-26 05:55:30 / Modified: 17:31:57" itemprop="dateCreated datePublished" datetime="2020-03-26T05:55:30+09:00">2020-03-26</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Math-Property"><a href="#Math-Property" class="headerlink" title="Math Property"></a>Math Property</h1><p>1.Math.Pi<br>Pi값 = 3.14… 반환.</p>
+<h1 id="Math-Method"><a href="#Math-Method" class="headerlink" title="Math Method"></a>Math Method</h1><p>1.Math.abs(x: number): number<br>인수의 절댓값 반환. 반드시 0또는 양수이어야 한다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.abs(<span class="number">-1</span>);       <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.abs(<span class="string">'-1'</span>);     <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">Math</span>.abs(<span class="literal">null</span>);     <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">Math</span>.abs(<span class="literal">undefined</span>);<span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>2 Math.round(x: number): number</p>
+<p>인수의 소수점 이하를 반올림한 정수 반환.</p>
+<p>3 Math.ceil(x: number): number<br>인수의 소수점 이하를 올림한 정수를 반환.</p>
+<p>4 Math.floor(x: number): number<br>인수의 소수점 이하를 내림한 정수 반환.</p>
+<ul>
+<li>양수인 경우, 소수점 이하를 떼어 버린 다음 정수를 반환</li>
+<li>음수인 경우, 소수점 이하를 떼어 버린 다음 -1을 한 정수를 반환.</li>
+</ul>
+<p>5 Math.sqrt(x: number): number<br>인수의 제곱근 반환.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.sqrt(<span class="number">9</span>);  <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">Math</span>.sqrt(<span class="number">-9</span>); <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>6 Math.random(): number<br>임의의 부동 소수점 0 ~ 1 미만 반환.</p>
+<p>7 Math.pow(x: number, y: number): number<br>첫번째 인수 밑, 두번째 인수를 지수로하여 거듭제곱.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">8</span>);  <span class="comment">// 256</span></span><br><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>, <span class="number">-1</span>); <span class="comment">// 0.5</span></span><br><span class="line"><span class="built_in">Math</span>.pow(<span class="number">2</span>);     <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure>
+<p>8 Math.max(…values: number[]): number<br>인수 중에서 가장 큰 수 반환.</p>
+<p>9 Math.min(…values: number[]): number<br>인수 중에서 가장 작은 수 반환.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/03/23/js0323/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1165,96 +1241,6 @@ Object.prototype.hasOwnproperty () 프로토타입 메소드 나열.</li>
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/03/08/js0308-4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ki Tae Park">
-      <meta itemprop="description" content="My Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="pkt0831's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/08/js0308-4/" class="post-title-link" itemprop="url">함수와 일급 객체</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-08 11:24:30" itemprop="dateCreated datePublished" datetime="2020-03-08T11:24:30+09:00">2020-03-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-11 19:25:02" itemprop="dateModified" datetime="2020-03-11T19:25:02+09:00">2020-03-11</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>일급 객체<br>아래와 같은 조건을 만족하는 객체를 일급 객체(first-class object)라 한다.</li>
-</ol>
-<p>1.무명의 리터럴로 생성할 수 있다. 즉, 런타임에 생성이 가능하다.<br>2.변수나 자료 구조(객체, 배열 등)에 저장할 수 있다.<br>3.함수의 매개 변수에게 전달할 수 있다.<br>4.함수의 결과값으로 반환할 수 있다.<br>자바스크립트의 함수는 아래 예제와 같이 위의 조건을 모두 만족하므로 일급 객체이다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">읽어보기만 이해안도됨.</span><br><span class="line"><span class="comment">// 1. 함수는 무명의 리터럴로 생성할 수 있다.</span></span><br><span class="line"><span class="comment">// 2. 함수는 변수에 저장할 수 있다.</span></span><br><span class="line"><span class="comment">// 런타임(할당 단계)에 함수 리터럴이 평가되어 함수 객체가 생성되고 변수에 할당된다.</span></span><br><span class="line"><span class="keyword">const</span> increase = <span class="function"><span class="keyword">function</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> ++num;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> decrease = <span class="function"><span class="keyword">function</span> (<span class="params">num</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> --num;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 함수는 객체에 저장할 수 있다.</span></span><br><span class="line"><span class="keyword">const</span> predicates = &#123; increase, decrease &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 함수의 매개 변수에게 전달할 수 있다.</span></span><br><span class="line"><span class="comment">// 4. 함수의 반환값으로 사용할 수 있다.</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeCounter</span>(<span class="params">predicate</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    num = predicate(num);</span><br><span class="line">    <span class="keyword">return</span> num;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 함수는 매개 변수에게 함수를 전달할 수 있다.</span></span><br><span class="line"><span class="keyword">const</span> increaser = makeCounter(predicates.increase);</span><br><span class="line"><span class="built_in">console</span>.log(increaser()); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(increaser()); <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 함수는 매개 변수에게 함수를 전달할 수 있다.</span></span><br><span class="line"><span class="keyword">const</span> decreaser = makeCounter(predicates.decrease);</span><br><span class="line"><span class="built_in">console</span>.log(decreaser()); <span class="comment">// -1</span></span><br><span class="line"><span class="built_in">console</span>.log(decreaser()); <span class="comment">// -2</span></span><br></pre></td></tr></table></figure>
-<p>함수 일급 객체 = 객체와 동일.객체는 값이므로 함수는 값과 동일하게 취급할 수 있다. 따라서 함수는 값을 사용할 수 있는 곳(변수 할당문, 객체의 프로퍼티, 배열의 요소, 함수 호출의 인수, 함수 반환문)이라면 어디서든지 리터럴로 정의할 수 있으며 런타임(runtime)에 함수 객체로 평가된다.</p>
-<ol start="2">
-<li>함수 객체의 프로퍼티<br>일반 객체에는 없는 arguments, caller, length, name, prototype 프로퍼티가 함수 객체에는 존재한다.<br>arguments, caller, length, name, prototype 프로퍼티는 모두 함수 객체의 데이터 프로퍼티이다.</li>
-</ol>
-<p>2.1 arguments 프로퍼티<br>함수 객체의 arguments 프로퍼티 값은 arguments 객체이다. arguments 객체는 함수 호출 시 전달된 인수(argument)들의 정보를 담고 있는 순회 가능한(iterable) 유사 배열 객체(array-like object)이며 함수 내부에서 지역 변수처럼 사용된다. 즉, 함수 외부에서는 사용할 수 없다.</p>
-<p>자바스크립트는 함수 호출 시 함수 정의에 따라 인수를 전달하지 않아도 에러가 발생하지 않는다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">multiply</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">  <span class="keyword">return</span> x * y;                  <span class="comment">//x,y는 undefined</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(multiply());        <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(multiply(<span class="number">1</span>));       <span class="comment">// NaN</span></span><br><span class="line"><span class="built_in">console</span>.log(multiply(<span class="number">1</span>, <span class="number">2</span>));    <span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(multiply(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-<p>함수를 정의할 때 선언한 매개변수는 함수 몸체 내부에서 변수와 동일하게 취급된다. 즉, 함수가 호출되면 함수 몸체 내에서 암묵적으로 매개변수가 선언되고 undefined로 초기화된 이후 인수가 할당된다.</p>
-<p>arguments 객체는 매개변수 개수를 확정할 수 없는 가변 인자 함수를 구현할 때 유용하게 사용된다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> res = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// arguments 객체는 length 프로퍼티가 있는 유사 배열 객체이므로 for 문으로 순회할 수 있다.</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">    res += <span class="built_in">arguments</span>[i];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(sum());        <span class="comment">// 0</span></span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">2</span>));    <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">console</span>.log(sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
-
-<p>2.2. caller 프로퍼티</p>
-<p>caller 프로퍼티는 ECMAScript 스펙에 포함되지 않은 비표준 프로퍼티이다. 알아두기만 하자.<br>함수 객체의 caller 프로퍼티는 함수 자신을 호출한 함수를 가리킨다.</p>
-<p>2.3. length 프로퍼티<br>함수 객체의 length 프로퍼티는 함수 정의 시 선언한 매개변수의 개수를 가리킨다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">console</span>.log(foo.length); <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(bar.length); <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">baz</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x * y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(baz.length); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-<p>2.4. name 프로퍼티<br>함수 객체의 name 프로퍼티는 함수 이름을 나타낸다.<br>name 프로퍼티는 ES5와 ES6에서 동작을 달리 하므로 주의하기 바란다. 익명 함수 표현식의 경우, ES5에서 name 프로퍼티는 빈 문자열을 값으로 갖는다. 하지만 ES6에서는 함수 객체를 가리키는 변수 이름을 값으로 갖는다.</p>
-<p>2.5. <strong>proto</strong> 접근자 프로퍼티<br>모든 객체는 <a href="내부슬롯이름">[Prototype]</a>이라는 내부 슬롯을 갖는다.(내부슬롯은 자신의 부모역할을 하는 객체를 가리킨다.그것을 프로토타입 객체라고 부른다.) [[Prototype]] 내부 슬롯은 객체 지향 프로그래밍의 상속을 구현하는 프로토타입 객체를 가리킨다.<br><strong>proto</strong> (자신의 부모 프로퍼티 객체를 가리킨다.)프로퍼티는 [[Prototype]] 내부 슬롯이 가리키는 프로토타입 객체에 접근하기 위해 사용하는 접근자 프로퍼티이다. 내부 슬롯에는 직접 접근할 수 없고 간접적인 접근 방법을 제공하는 경우에 한하여 접근할 수 있다. [[Prototype]] 내부 슬롯에도 직접 접근할 수 없으며 <strong>proto</strong> 접근자 프로퍼티를 통해 간접적으로 프로토타입 객체에 접근할 수 있다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">a</span>: <span class="number">1</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 객체 리터럴 방식으로 생성한 객체의 프로토타입 객체는 Object.prototype이다.</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.__proto__ === <span class="built_in">Object</span>.prototype); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 객체 리터럴 방식으로 생성한 객체는 프로토타입 객체인 Object.prototype의 프로퍼티를 상속받는다.</span></span><br><span class="line"><span class="comment">// hasOwnProperty 메소드는 Object.prototype의 메소드이다.</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.hasOwnProperty(<span class="string">'a'</span>));         <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.hasOwnProperty(<span class="string">'__proto__'</span>)); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<p>2.6. prototype 프로퍼티<br>prototype 프로퍼티는 함수 객체만이 소유하는 프로퍼티이다. 일반 객체에는 prototype 프로퍼티가 없다</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 함수 객체는 prototype 프로퍼티를 소유한다.</span></span><br><span class="line"><span class="built_in">console</span>.log((<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;).hasOwnProperty(<span class="string">'prototype'</span>)); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 일반 객체는 prototype 프로퍼티를 소유하지 않는다.</span></span><br><span class="line"><span class="built_in">console</span>.log((&#123;&#125;).hasOwnProperty(<span class="string">'prototype'</span>)); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-<p>prototype 프로퍼티는 함수가 객체를 생성하는 생성자 함수로 사용될 때, 생성자 함수가 생성할 인스턴스의 프로토타입 객체를 가리킨다.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1325,7 +1311,7 @@ Object.prototype.hasOwnproperty () 프로토타입 메소드 나열.</li>
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

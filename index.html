@@ -143,6 +143,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/04/08/Promise(04.08)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ki Tae Park">
+      <meta itemprop="description" content="My Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pkt0831's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/08/Promise(04.08)/" class="post-title-link" itemprop="url">Promise</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-04-08 09:55:30 / Modified: 21:35:32" itemprop="dateCreated datePublished" datetime="2020-04-08T09:55:30+09:00">2020-04-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>프로미스란?<br>자바스크립트는 비동기 처리를 위해 콜백 함수를 사용하는데 에러의 예외 처리가 곤란한 단점을 보완하기위해 비동기 처리를 위한 다른 패턴인 프로미스가 생기게 되었다. 이로인해 비동기 처리 시점이 명확하게 표현할수있게되었다.</p>
+</li>
+<li><p>콜백 패턴의 단점.</p>
+</li>
+</ul>
+<p>1.콜백 헬.<br>비동기 처리를 위해 콜백 패턴을 사용하면 여러개의 콜백 함수가 정칩되어 복잡도가 높아지는 현상.<br>이러한 현상이 생기는 원인은 비동기 처리 모델은 실행 완료를 기다리지 않고 즉시 다음 태스크를 실행하기 때문에 기대한 대로 동작하지않게 된다.<br>2.에러 처리의 한계.<br>비동기 처리 함수의 콜백 함수 실행 순서는.<br>1.이벤트 발생 -&gt; 태스트 큐 이동 -&gt; 호출 스택이 비어졌을때 호출 스택으로 이동후 실행.</p>
+<ul>
+<li><p>프로미스의 생성.<br>프로미스는 Promise 생성자 함수를 통해 인스턴스화하고 resolve와 reject  함수를 인자로 전달받는다.<br>Promise는 비동기 처리가 성공(fulfilled)하였는지 또는 실패(rejected)하였는지 등의 상태(state) 정보를 갖는다.<br>fullfilled (성공), rejected(실패), settled(성공 또는 실패), pending(수행 안됨).</p>
+</li>
+<li><p>프로미스의 후속 처리 메소드<br>Promise로 구현된 비동기 함수는 Promise 객체를 반환한다. Promise 객체의 후속 처리 메소드(then, catch)를 통해 비동기 처리 결과 또는 에러 메시지를 전달받아 처리한다.<br>then: 두 개의 콜백 함수를 인자로 전달 받는다. 첫 번째 콜백 함수는 성공(fulfilled, resolve 함수가 호출된 상태) 시 호출되고 두 번째 함수는 실패.<br>then 메소드는 Promise를 반환.<br>catch: 예외(비동기 처리에서 발생한 에러와 then 메소드에서 발생한 에러)가 발생하면 호출.</p>
+</li>
+<li><p>프로미스의 에러 처리.<br>catch 메소드는 비동기 처리에서 발생한 에러뿐만 아니라 then메소드 내부에서 발생한 에러도 캐치한다. 에러처리는 catch메소드를 사용하는 편이 효율적이다.</p>
+</li>
+<li><p>프로미스 체이닝<br>프로미스는 후속 처리 메소드를 체이닝하여 여러 개의 프로미스를 연결하여 사용하여 콜백 헬을 해결한다.</p>
+</li>
+<li><p>프로미스의 정적 메소드.<br>4가지 정적 메소드를 제공한다.</p>
+</li>
+</ul>
+<ol>
+<li>Promise.resolve/Promise.reject<br>Promise.resolve 메소드는 인자로 전달된 값을 resolve하는 Promise를 생성.<br>Promise.reject 인자로 전달된 값을 reject하는 프로미스를 생성.</li>
+</ol>
+<p>2.Promise.all<br>프로미스가 담겨 있는 배열 등의 이터러블을 인자로 전달 받는다.</p>
+<p>3.Promise.race<br>Promise.all처럼 배열,이터러블을 인자로 전달 받지만 차이점은 병렬로 처리하는것이 아니라 가장 먼저 처리된 프로미스가 resolve한 처리 결과를 반환한다.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/04/04/TIL/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -174,7 +256,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-04-07 23:44:10" itemprop="dateModified" datetime="2020-04-07T23:44:10+09:00">2020-04-07</time>
+                <time title="Modified: 2020-04-08 21:01:09" itemprop="dateModified" datetime="2020-04-08T21:01:09+09:00">2020-04-08</time>
               </span>
 
           
@@ -190,6 +272,7 @@
       
           <ul>
 <li>04.07<br>todo 리스트를 JSON을 이용해서 가상의 백엔드 서버를 설정하고 서버 호출 실습.<br>todo 리스트 마스터 요망. </li>
+<li>04.08<br>todo 리스트 미비한거 공부 및 Promise 예습. 비동기 처리의 어려움을 느낌.</li>
 </ul>
 
       
@@ -1010,89 +1093,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://pkt0831.github.io/2020/03/15/js0315-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ki Tae Park">
-      <meta itemprop="description" content="My Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="pkt0831's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/03/15/js0315-1/" class="post-title-link" itemprop="url">빌트인 객체</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2020-03-15 11:35:30" itemprop="dateCreated datePublished" datetime="2020-03-15T11:35:30+09:00">2020-03-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-03-16 16:54:32" itemprop="dateModified" datetime="2020-03-16T16:54:32+09:00">2020-03-16</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.자바스크립트 객체는 3가지로 분류된다.<br>-표준 빌트인 객체<br>표준 빌트인 객체(standard built-in objects / native objects / global objects)  ECMAScript 사양에 정의된 객체를 말하며 애플리케이션 전역의 공통 기능을 제공한다.<br>표준 빌트인 객체는 전역 객체의 프로퍼티로서 제공된다. 별도 선언없이 전역 변수처럼 참조 가능하다.<br>-호스트 객체<br> ECMAScript 사양에 정의되어 있지 않지만 자바스크립트 실행 환경 에서 추가적으로 제공하는 객체를 말한다.<br>-사용자 정의 객체<br>기본 제공되는 객체가 아닌 사용자가 직접 정의한 객체.<br>2. 표준 빌트인 객체<br>Object, String, Number, Boolean, Symbol, Date, Math, RegExp, Array 등 40여개의 표준 빌트인 객체를 제공한다.Math, Reflect, JSON을 제외한 표준 빌트인 객체는 모두 인스턴스를 생성할 수 있는 생성자 함수 객체이다.<br>생성자 함수 객체인 표준 빌트인 객체는 프로토타입 메소드와 정적 메소드를 제공하고 생성자 함수 객체가 아닌 표준 빌트인 객체는 정적 메소드만을 제공한다.<br>표준 빌트인 객체인 String, Number, Boolean, Function, Array, Date는 생성자 함수로 호출하여 인스턴스를 생성할 수 있다</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// String 생성자 함수에 의한 String 객체 생성</span></span><br><span class="line"><span class="keyword">const</span> strObj = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'Lee'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> strObj); <span class="comment">// object</span></span><br><span class="line"><span class="built_in">console</span>.log(strObj);        <span class="comment">// String &#123;"Lee"&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Number 생성자 함수에 의한 Number 객체 생성</span></span><br><span class="line"><span class="keyword">const</span> numObj = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">123</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> numObj); <span class="comment">// object</span></span><br><span class="line"><span class="built_in">console</span>.log(numObj);        <span class="comment">// Number &#123;123&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Boolean 생성자 함수에 의한 Boolean 객체 생성</span></span><br><span class="line"><span class="keyword">const</span> boolObj= <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">true</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> boolObj); <span class="comment">// object</span></span><br><span class="line"><span class="built_in">console</span>.log(boolObj);        <span class="comment">// Boolean &#123;true&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Function 생성자 함수에 의한 Function 객체(함수) 생성</span></span><br><span class="line"><span class="keyword">const</span> func = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">'x'</span>, <span class="string">'return x * x'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> func); <span class="comment">// function</span></span><br><span class="line"><span class="built_in">console</span>.dir(func);        <span class="comment">// ƒ anonymous(x )</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Array 생성자 함수에 의한 Array 객체(배열) 생성</span></span><br><span class="line"><span class="keyword">const</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> arr); <span class="comment">// object</span></span><br><span class="line"><span class="built_in">console</span>.log(arr);        <span class="comment">// (3) [1, 2, 3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// RegExp 생성자 함수에 의한 RegExp 객체(정규 표현식) 생성</span></span><br><span class="line"><span class="keyword">const</span> regExp = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="regexp">/ab+c/i</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> regExp); <span class="comment">// object</span></span><br><span class="line"><span class="built_in">console</span>.log(regExp);        <span class="comment">// /ab+c/i</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Date 생성자 함수에 의한 Date 객체 생성</span></span><br><span class="line"><span class="keyword">const</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> date); <span class="comment">// object</span></span><br><span class="line"><span class="built_in">console</span>.log(date);        <span class="comment">// Tue Mar 19 2019 02:38:26 GMT+0900 (한국 표준시)</span></span><br></pre></td></tr></table></figure>
-<p>3.원시값과 래퍼 객체 중요!<br>원시값을 객체처럼 사용하면 자바스크립트 엔진은 암묵적으로 연관된 객체를 생성하고 생성된 객체로 프로퍼티에 접근하거나 메소드를 호출하고 다시 원시값으로 되돌린다.</p>
-<p>이처럼 문자열, 숫자, 불리언 값에 대해 객체처럼 접근하면 생성되는 임시 객체를 레퍼 객체(wrapper object)라 한다.<br><img src="https://user-images.githubusercontent.com/56964928/76703405-dcd25480-6714-11ea-8443-6bcebf4e4e9b.png" alt="객체1"></p>
-<ol start="4">
-<li>전역 객체<br>전역 객체(Global Object)는 코드가 실행되기 이전 단계에 자바스크립트 엔진에 의해 어떤 객체보다도 먼저 생성되는 특수한 객체이며 어떤 객체에도 속하지 않은 최상위 객체이다.<br>브라우저 환경에서는 window(또는 self, this, frames)가 전역 객체를 가리키지만 Node.js 환경에서는 global이 전역 객체를 가리킨다.<br>전역 객체는 표준 빌트인 객체(Object, String, Number, Function, Array…)들과 환경에 따른 호스트 객체(클라이언트 web API 또는 Node.js의 호스트 API) 그리고 var 키워드로 선언한 전역 변수와 전역 함수를 프로퍼티로 갖는다.<br>전역 객체는 계층적 구조 상 어떤 객체에도 속하지 않은 모든 빌트인 객체(표준 빌트인 객체와 호스트 객체)의 최상위 객체이다.<br>최상위 객체라는 의미가 아니고 객체의 계층적 구조 상 표준 빌트인 객체와 호스트 객체를 프로퍼티로 소유한다는 것을 말한다.</li>
-</ol>
-<p>-전역 객체의 특징.<br>-전역 객체는 개발자가 의도적으로 생성할 수 없다.<br>-전역 객체의 프로퍼티를 참조할 때 window(또는 global)를 생략할 수 있다.<br>-전역 객체는 Object, String, Number, Boolean, Function, Array, RegExp, Date, Math, Promise와 같은 모든 표준 빌트인 객체를 프로퍼티로 가지고 있다.<br>-자바스크립트 실행 환경에 따라 추가적으로 프로퍼티와 메소드를 갖는다. 브라우저 환경에서는 DOM, BOM, Canvas, XMLHttpRequest, fetch, requestAnimationFrame, SVG, Web Storage, Web Component, Web worker와 같은 클라이언트 사이드 Web API를 호스트 객체로 제공하고 Node.js 환경에서는 Node.js 고유의 API를 호스트 객체로 제공한다.<br>-var 키워드로 선언한 전역 변수와 선언하지 않은 변수에 값을 할당한 암묵적 전역 그리고 전역 함수는 전역 객체의 프로퍼티가 된다.<br>-let이나 const 키워드로 선언한 전역 변수는 전역 객체의 프로퍼티가 아니다.<br>-브라우저 환경의 모든 자바스크립트 코드는 하나의 전역 객체 window를 공유한다. 여러 개의 script 태그를 통해 자바스크립트 코드를 분리하여도 하나의 전역 객체 window를 공유하는 것은 변함이 없다. 이는 분리되어 있는 자바스크립트 코드가 하나의 전역을 공유한다는 의미이다.<br>4.1 빌트인 전역 프로퍼티<br>빌트인 전역 프로퍼티(Built-in global property)는 전역 객체의 프로퍼티를 의미한다.<br>4.1.1. Infinity<br>Infinity 프로퍼티는 양/음의 무한대를 나타내는 숫자값 Infinity를 갖는다.<br>4.1.2. NaN<br>NaN 프로퍼티는 숫자가 아님(Not-a-Number)을 나타내는 숫자값 NaN을 갖는다. NaN 프로퍼티는 Number.NaN 프로퍼티와 같다.<br>4.1.3. undefined<br>undefined 프로퍼티는 원시 타입 undefined를 값으로 갖는다.<br>4.2. 빌트인 전역 함수<br>빌트인 전역 함수(Built-in global function)는 애플리케이션 전역에서 호출할 수 있는 빌트인 함수로서 전역 객체의 메소드이다.<br>4.2.1. eval<br>문자열 형태로 매개변수에 전달된 코드를 런타임에 동적으로 평가하고 실행하여 결과값을 반환한다. 전달된 문자열 코드가 여러 개의 문으로 이루어져 있다면 모든 문을 실행 후 마지막 결과값을 반환한다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 주어진 코드를 런타임 평가하고 실행하여 결과값을 반환한다.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> <span class="variable">code</span></span> - 코드를 나타내는 문자열</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;*&#125;</span> </span>문자열 코드를 평가/실행한 결과값</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">eval</span>(code)</span><br></pre></td></tr></table></figure>
-<p>4.2.2. isFinite<br>매개 변수에 전달된 값이 정상적인 유한수인지 검사하여 그 결과를 불리언 타입으로 반환한다. 매개변수에 전달된 값이 숫자가 아닌 경우, 숫자로 타입을 변환한 후 검사를 수행한다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 주어진 숫자가 유한수인지 확인하고 그 결과를 반환한다.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">testValue</span></span> - 검사 대상 값</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;boolean&#125;</span> </span>유한수 여부 확인 결과값</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">isFinite</span>(testValue)</span><br></pre></td></tr></table></figure>
-<p>4.2.3. isNaN<br>매개변수에 전달된 값이 NaN인지 검사하여 그 결과를 불리런 타입으로 반환한다. 매개변수에 전달된 값이 숫자가 아닌 경우, 숫자로 타입을 변환한 후 검사를 수행한다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 주어진 숫자가 NaN인지 확인하고 그 결과를 반환한다.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">testValue</span></span> - 검사 대상 값</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;boolean&#125;</span> </span>NaN 여부 확인 결과값</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">isNaN</span>(testValue)</span><br></pre></td></tr></table></figure>
-<p>4.2.4. parseFloat</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">매개변수에 전달된 문자열을 부동소수점 숫자(floating point number)로 변환하여 반환한다.</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 주어진 문자열을 부동소수점 숫자로 변환하여 반환한다.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> <span class="variable">string</span></span> - 변환 대상 값</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;number&#125;</span> </span>변환 결과값</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">parseFloat</span>(string)</span><br></pre></td></tr></table></figure>
-<p>4.2.5. parseInt<br>매개변수에 전달된 문자열을 정수형 숫자(Integer)로 해석(parsing)하여 반환한다. 반환값은 언제나 10진수이다.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 주어진 문자열을 정수형 숫자(Integer)로 해석(parsing)하여 반환한다.</span></span><br><span class="line"><span class="comment"> * 반환값은 언제나 10진수이다.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> <span class="variable">string</span></span> - 변환 대상 값</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> </span>[radix] - 진법을 나타내는 기수(2 ~ 36, 기본값 10)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@returns <span class="type">&#123;number&#125;</span> </span>변환 결과값</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">parseInt</span>(string, radix);</span><br></pre></td></tr></table></figure>
-<p>4.2.6. encodeURI / decodeURI   이건 나중에 ….<br>encodeURI 함수는 매개변수로 전달된 URI(Uniform Resource Identifier)를 인코딩한다. URI는 인터넷에 있는 자원을 나타내는 유일한 주소를 말한다. URI의 하위개념으로 URL, URN이 있다.<br><img src="https://user-images.githubusercontent.com/56964928/76703406-de9c1800-6714-11ea-863d-036c6e40346d.png" alt="객체2"><br>4.2.7. encodeURIComponent / decodeURIComponent<br>encodeURIComponent 함수는 매개변수로 전달된 URI(Uniform Resource Identifier) 구성 요소(component)를 인코딩한다. 여기서 인코딩이란 URI의 문자들을 이스케이프 처리하는 것을 의미한다. 단, 알파벳, 0~9의 숫자, - _ . ! ~ * ‘ ( ) 문자는 이스케이프 처리에서 제외된다. decodeURIComponent 함수는 매개변수로 전달된 URI 구성 요소를 디코딩한다.</p>
-<p>4.3. 암묵적 전역<br>전역 객체의 프로퍼티가 되어 마치 전역 변수처럼 동작하는 현상을 암묵적 전역(implicit global)이라 한다.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1163,7 +1163,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

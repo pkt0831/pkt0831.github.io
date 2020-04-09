@@ -28,7 +28,7 @@
 <meta property="og:description" content="프로미스란?자바스크립트는 비동기 처리를 위해 콜백 함수를 사용하는데 에러의 예외 처리가 곤란한 단점을 보완하기위해 비동기 처리를 위한 다른 패턴인 프로미스가 생기게 되었다. 이로인해 비동기 처리 시점이 명확하게 표현할수있게되었다.  콜백 패턴의 단점.   1.콜백 헬.비동기 처리를 위해 콜백 패턴을 사용하면 여러개의 콜백 함수가 정칩되어 복잡도가 높아지는">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-08T00:55:30.000Z">
-<meta property="article:modified_time" content="2020-04-08T12:35:32.381Z">
+<meta property="article:modified_time" content="2020-04-08T12:35:58.708Z">
 <meta property="article:author" content="Ki Tae Park">
 <meta name="twitter:card" content="summary">
 
@@ -169,7 +169,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-04-08 09:55:30 / Modified: 21:35:32" itemprop="dateCreated datePublished" datetime="2020-04-08T09:55:30+09:00">2020-04-08</time>
+              <time title="Created: 2020-04-08 09:55:30 / Modified: 21:35:58" itemprop="dateCreated datePublished" datetime="2020-04-08T09:55:30+09:00">2020-04-08</time>
             </span>
 
           
@@ -203,10 +203,13 @@
 </li>
 </ul>
 <ol>
-<li>Promise.resolve/Promise.reject<br>Promise.resolve 메소드는 인자로 전달된 값을 resolve하는 Promise를 생성.<br>Promise.reject 인자로 전달된 값을 reject하는 프로미스를 생성.</li>
+<li><p>Promise.resolve/Promise.reject<br>Promise.resolve 메소드는 인자로 전달된 값을 resolve하는 Promise를 생성.<br>Promise.reject 인자로 전달된 값을 reject하는 프로미스를 생성.</p>
+</li>
+<li><p>Promise.all<br>프로미스가 담겨 있는 배열 등의 이터러블을 인자로 전달 받는다.</p>
+</li>
+<li><p>Promise.race<br>Promise.all처럼 배열,이터러블을 인자로 전달 받지만 차이점은 병렬로 처리하는것이 아니라 가장 먼저 처리된 프로미스가 resolve한 처리 결과를 반환한다.</p>
+</li>
 </ol>
-<p>2.Promise.all<br>프로미스가 담겨 있는 배열 등의 이터러블을 인자로 전달 받는다.</p>
-<p>3.Promise.race<br>Promise.all처럼 배열,이터러블을 인자로 전달 받지만 차이점은 병렬로 처리하는것이 아니라 가장 먼저 처리된 프로미스가 resolve한 처리 결과를 반환한다.</p>
 
     </div>
 

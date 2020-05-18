@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"pkt0831.github.io","root":"/","scheme":"Muse","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="04.07todo 리스트를 JSON을 이용해서 가상의 백엔드 서버를 설정하고 서버 호출 실습.todo 리스트 마스터 요망.  04.08todo 리스트 미비한거 공부 및 Promise 예습. 비동기 처리의 어려움을 느낌. 04.09Promise 실습 및 이력서 보완점 고침. todo 리스트 반복 학습. 04.11todo 리스트 실습 및 다음 수업 예제들 예">
+  <meta name="description" content="04.07todo 리스트를 JSON을 이용해서 가상의 백엔드 서버를 설정하고 서버 호출 실습. 04.08todo 리스트 미비한거 공부 및 Promise 예습. 비동기 처리의 어려움을 느낌. 04.09Promise 실습 및 이력서 보완점 고침. Todo 리스트 반복 학습. 04.11Todo 리스트 실습 및 다음 수업 예제들 예습. 04 13Ajax,Prom">
 <meta property="og:type" content="article">
 <meta property="og:title" content="하루 정리.">
 <meta property="og:url" content="https://pkt0831.github.io/2020/04/04/TIL/index.html">
 <meta property="og:site_name" content="pkt0831&#39;s Blog">
-<meta property="og:description" content="04.07todo 리스트를 JSON을 이용해서 가상의 백엔드 서버를 설정하고 서버 호출 실습.todo 리스트 마스터 요망.  04.08todo 리스트 미비한거 공부 및 Promise 예습. 비동기 처리의 어려움을 느낌. 04.09Promise 실습 및 이력서 보완점 고침. todo 리스트 반복 학습. 04.11todo 리스트 실습 및 다음 수업 예제들 예">
+<meta property="og:description" content="04.07todo 리스트를 JSON을 이용해서 가상의 백엔드 서버를 설정하고 서버 호출 실습. 04.08todo 리스트 미비한거 공부 및 Promise 예습. 비동기 처리의 어려움을 느낌. 04.09Promise 실습 및 이력서 보완점 고침. Todo 리스트 반복 학습. 04.11Todo 리스트 실습 및 다음 수업 예제들 예습. 04 13Ajax,Prom">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-04T02:55:30.000Z">
-<meta property="article:modified_time" content="2020-05-15T09:42:48.437Z">
+<meta property="article:modified_time" content="2020-05-18T11:52:28.602Z">
 <meta property="article:author" content="Ki Tae Park">
 <meta name="twitter:card" content="summary">
 
@@ -175,7 +175,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-15 18:42:48" itemprop="dateModified" datetime="2020-05-15T18:42:48+09:00">2020-05-15</time>
+                <time title="Modified: 2020-05-18 20:52:28" itemprop="dateModified" datetime="2020-05-18T20:52:28+09:00">2020-05-18</time>
               </span>
 
           
@@ -190,12 +190,12 @@
 
       
         <ul>
-<li>04.07<br>todo 리스트를 JSON을 이용해서 가상의 백엔드 서버를 설정하고 서버 호출 실습.<br>todo 리스트 마스터 요망. </li>
+<li>04.07<br>todo 리스트를 JSON을 이용해서 가상의 백엔드 서버를 설정하고 서버 호출 실습.</li>
 <li>04.08<br>todo 리스트 미비한거 공부 및 Promise 예습. 비동기 처리의 어려움을 느낌.</li>
-<li>04.09<br>Promise 실습 및 이력서 보완점 고침. todo 리스트 반복 학습.</li>
-<li>04.11<br>todo 리스트 실습 및 다음 수업 예제들 예습.</li>
-<li>04 13<br>ajax,promise 등 통신 수업 및 복습.</li>
-<li>04.14<br>stopWatch 등 각종 예제 풀이.</li>
+<li>04.09<br>Promise 실습 및 이력서 보완점 고침. Todo 리스트 반복 학습.</li>
+<li>04.11<br>Todo 리스트 실습 및 다음 수업 예제들 예습.</li>
+<li>04 13<br>Ajax,Promise 등 통신 수업 및 복습.</li>
+<li>04.14<br>StopWatch 등 각종 예제 풀이.</li>
 <li>04.15<br>ajax통신 복습 및 stopWatch 보완.</li>
 <li>04.18<br>프로젝트 기능구현 공부.</li>
 <li>04.20~24<br>프로젝트 기간.</li>
@@ -208,7 +208,9 @@
 <li>05.11<br>React Props 및 로그인 실습.</li>
 <li>05.12<br>React Recycle 및 실습. 네트워크 운영체제 기초 이론.</li>
 <li>05.13<br>React Hook useEffect, useMemo, useCallback, React.memo.</li>
-<li>05.15<br>React Use Reducer, 전화번호부 실습.</li>
+<li>05.14<br>React Use Reducer</li>
+<li>05.15<br>React use Reducer 전화번호부.</li>
+<li>05.18<br>Rest Api 연동.</li>
 </ul>
 
     </div>

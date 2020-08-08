@@ -28,12 +28,13 @@
 <meta property="og:description" content="Deno JS란? Node JS의 제작자인 Ryan Dahl이 단점을 보완하고 대체하기 위하여 만든 Javascript와 Typescript를 실행하기 위한 새로운 Command-line Runtime이다. Deno란 용어는 Node를 거꾸로 재조합하여 만든 용어이다.  Deno JS를 공부하게 된 이유는? 프론트엔드를 공부하면서 자연스럽게 Node JS에">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://user-images.githubusercontent.com/56964928/89679054-47d23100-d92b-11ea-8a35-0c77fd62d514.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/56964928/89699917-7a991b00-d965-11ea-8b9f-3ef21fb0314f.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/56964928/89679052-46a10400-d92b-11ea-8dae-2a7126a8506c.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/56964928/89689496-7bb75180-d93f-11ea-826d-ff44afd32db3.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/56964928/89679055-47d23100-d92b-11ea-8847-1568191c7648.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/56964928/89679056-486ac780-d92b-11ea-9b2b-5473e51855b5.png">
 <meta property="article:published_time" content="2020-08-27T14:07:30.000Z">
-<meta property="article:modified_time" content="2020-08-08T00:38:27.891Z">
+<meta property="article:modified_time" content="2020-08-08T01:54:46.738Z">
 <meta property="article:author" content="Ki Tae Park">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://user-images.githubusercontent.com/56964928/89679054-47d23100-d92b-11ea-8a35-0c77fd62d514.png">
@@ -181,7 +182,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-08 09:38:27" itemprop="dateModified" datetime="2020-08-08T09:38:27+09:00">2020-08-08</time>
+                <time title="Modified: 2020-08-08 10:54:46" itemprop="dateModified" datetime="2020-08-08T10:54:46+09:00">2020-08-08</time>
               </span>
 
           
@@ -218,9 +219,11 @@
 <h3 id="Ryan-Dahl이-느낀-Node를-만든-후-후회하는-점과-Deno에서-달라진점"><a href="#Ryan-Dahl이-느낀-Node를-만든-후-후회하는-점과-Deno에서-달라진점" class="headerlink" title="Ryan Dahl이 느낀 Node를 만든 후 후회하는 점과 Deno에서 달라진점."></a>Ryan Dahl이 느낀 Node를 만든 후 후회하는 점과 Deno에서 달라진점.</h3><ol>
 <li>index.js.<br>웹 표준에 index.html이 있었기 때문에 그걸 따라 index.js를 만들면 귀여워 보여서 만들었는데 불필요한 도입이였다고 한다.<br>이로 인해 불필요하게 모듈 로딩 시스템을 복잡하게 만들었으며, package.json에 종속적이 되어 더욱 불필요한 방식이 되었다고 후회했다.  </li>
 <li>Promise 제거.<br>Promise를 만들었다가 제거했는데, 그로 인해 비동기 처리에 어려움을 겪었고 async/await 보급화를 좀 더 빨리 당길 수 있는것을 늦췄다.<br>현재 비동기 호출은 여전히 콜백 API 기준으로 되어 있어서 많은 문제점들을 노출시키고 있다.</li>
-<li>보안 취약.<br>모든 시스템 호출에 접근 할 수 있어 취약점이 노출되는 보안 문제가 있다.<br>그에 따라 보안 강화를 위해 Node JS는 C++로 만들어져 있으나 Rust로 대체.<br>따라서 Deno의 코드는 샌드박스를 통해 실행된다. Node의 경우엔 파일 시스템에 손쉽게 접근 할 수 있지만 Deno는 명시적 복잡한 명령어를 통해 허용해야만 접근 가능하게 만들어 보안을 강화 시켰다.<br><img src="https://user-images.githubusercontent.com/56964928/89679054-47d23100-d92b-11ea-8a35-0c77fd62d514.png" alt="캡처_2020_08_08_03_02_30_202"></li>
+<li>보안 취약.<br>모든 시스템 호출에 접근 할 수 있어 취약점이 노출되는 보안 문제가 있다.<br>그에 따라 보안 강화를 위해 Node JS는 C++로 만들어져 있으나 Rust로 대체.<br>따라서 Deno의 코드는 샌드박스를 통해 실행된다. Node의 경우엔 파일 시스템에 손쉽게 접근 할 수 있지만 Deno는 명시적 복잡한 명령어를 통해 허용해야만 접근 가능하게 만들어 보안을 강화 시켰다.</li>
 </ol>
-<p>network acces 권한을 요구하고 있다.<br>4. package.json 문제.</p>
+<p><img src="https://user-images.githubusercontent.com/56964928/89679054-47d23100-d92b-11ea-8a35-0c77fd62d514.png" alt="캡처_2020_08_08_03_02_30_202"></p>
+<p>network acces 권한을 요구하고 있다.</p>
+<p><img src="https://user-images.githubusercontent.com/56964928/89699917-7a991b00-d965-11ea-8b9f-3ef21fb0314f.png" alt="캡처_2020_08_08_10_53_54_101"><br>Network acces 권한을 허용하는 명령어를 같이 사용해야만 코드가 실행된다.<br>4. package.json 문제.</p>
 <ul>
 <li>Javascript 프로그램에서 어떤 프로그램을 require 할때는 이 프로그램이 뭔지 모르기 때문에 package.json에 명시되어야 한다. 이전에는 디렉터리 모듈 개념이 존재하지 않았기 때문에 웹에서 Javascript를 script 태그로 여기저기에 포함시켰어야 했었다고 한다.<br>그에 따라서 탄생한게 NPM 모듈 패키지 이다. 하지만 NPM같은 모듈 패키지도 단지 라이브러리를 연결 하고 싶은 것인데 회계장부 작성하듯이 작성하는것에 회의를 느끼게 되었다고한다.<br>그리고 갈수록 node_Module이 커지는 큰 단점이 있었다. 로컬 프로젝트 폴더에 모듈이 설치되기 때문에 프로젝트가 많아질수록 모듈 관리 문제와 알고리즘이 복잡해지고 용량 증가로인한 무거움, 한 폴더에 모든 Module을 때려박는게 시멘틱에도 알맞지 않다고 생각하게 되었다고 한다.<br>때문에 Deno에선 생산적이고 안전한 스크립팅 환경을 위해 NPM 패키지 대신 ULR 또는 파일 경로를 참조해 모듈을 불러오는 시스템으로 변화하게되었다.<br><img src="https://user-images.githubusercontent.com/56964928/89679052-46a10400-d92b-11ea-8dae-2a7126a8506c.png" alt="캡처_2020_08_08_02_56_00_842"></li>
 </ul>

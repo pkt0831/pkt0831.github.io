@@ -174,7 +174,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-08 06:22:46" itemprop="dateModified" datetime="2020-08-08T06:22:46+09:00">2020-08-08</time>
+                <time title="Modified: 2020-08-08 09:33:45" itemprop="dateModified" datetime="2020-08-08T09:33:45+09:00">2020-08-08</time>
               </span>
 
           
@@ -193,14 +193,14 @@
 <li>Deno란 용어는 Node를 거꾸로 재조합하여 만든 용어이다.</li>
 </ul>
 <h3 id="Deno-JS를-공부하게-된-이유는"><a href="#Deno-JS를-공부하게-된-이유는" class="headerlink" title="Deno JS를 공부하게 된 이유는?"></a>Deno JS를 공부하게 된 이유는?</h3><ul>
-<li>프론트엔드를 공부하면서 자연스럽게 Node JS에 관심이 갔고, 최신 트렌드를 찾아보다가 Node JS 제작자인 Ryan Dahl이 Node의 단점을 보완한 새로운 라이브러리를 개발 했다고 해서 알게 되었다.</li>
+<li>프론트엔드를 공부하면서 자연스럽게 Node JS에 관심이 갔고, 최신 트렌드를 찾아보다가 Node JS 제작자인 Ryan Dahl이 Node의 단점을 보완한 새로운 runtime을 개발 했다고 해서 알게 되었다.</li>
 <li>Node가 점점 밀려나는 추세라는것을 알고 있었고 Deno를 공부 할수록 가까운 시일내에 Node를 대체할것이라는 확신을 가지게 되었다. </li>
 <li>나온지 얼마 되지 않아 대체 되는데 시간이 걸리겠지만 Node를 공부하기전에 Deno를 체험해보며 차이점을 느껴보고 싶었다.</li>
 </ul>
 <h3 id="Ryan-Dahl이-Deno를-만들게된-이유"><a href="#Ryan-Dahl이-Deno를-만들게된-이유" class="headerlink" title="Ryan Dahl이 Deno를 만들게된 이유"></a>Ryan Dahl이 Deno를 만들게된 이유</h3><ol>
-<li>최근 Go 언어같은 빠르고 안정적인 언어들이 생겨나면서 Node를 대체하게 되었다.</li>
+<li>최근 Go 언어같은 빠르고 안정적인 언어들 기반의 서버 사이드 단이 생겨나면서 Node를 대체하게 되었다.</li>
 <li>Node를 개발하면서 IO부분만 너무 신경쓴 나머지 다른 환경들은 도외시한채 설계하게 되었다. 그에 따라 많은 시간이 지날수록 많은 단점을 가진 프로그램이 되었다.</li>
-<li>이에따라 Node에서 바꾸려고 했지만 이미 Node를 적용한 회사와 소프트웨어들이 많아지면서 손댈수 없게되었다.</li>
+<li>이에따라 Node에서 바꾸려고 했지만 이미 Node를 적용한 회사와 소프트웨어들이 많아지면서 손댈수 없게 되었다.</li>
 </ol>
 <h3 id="기반-기술"><a href="#기반-기술" class="headerlink" title="기반 기술"></a>기반 기술</h3><ol>
 <li>V8 Javascript Runtime.</li>
@@ -209,22 +209,25 @@
 <li>TypeScript</li>
 </ol>
 <h3 id="Ryan-Dahl이-느낀-Node를-만든-후-후회하는-점과-Deno에서-달라진점"><a href="#Ryan-Dahl이-느낀-Node를-만든-후-후회하는-점과-Deno에서-달라진점" class="headerlink" title="Ryan Dahl이 느낀 Node를 만든 후 후회하는 점과 Deno에서 달라진점."></a>Ryan Dahl이 느낀 Node를 만든 후 후회하는 점과 Deno에서 달라진점.</h3><ol>
-<li>index.js.<br>웹 표준에 index.html이 있었기 때문에 그걸 따라 index.js를 만들면 귀여워 보여서 만들었는데 불필요한 도입이였다고 한다.<br>이로 인해 불필요하게 모듈 로딩 시스템을 복잡하게 만들었으며, package.json에 종속적이 되어 더욱 불필요한 방식이 되었다고 후회했다  </li>
-<li>Promise 제거.<br>Promise를 만들었다가 제거했는데, 그로 인해 비동기 처리에 어려움을 겪었고 async/await 보급화를 좀 더 빨리 당길 수 있는것을 늦췄다.</li>
-<li>보안 취약.<br>모든 시스템 호출에 접근 할 수 있어 취약점이 노출되는 보안 문제가 있다.<br>그에 따라 보안 강화를 위해 Node JS는 C++로 만들어져 있으나 Rust로 대체.<br>따라서 Deno의 코드는 샌드박스를 통해 실행된다. Node의 경우엔 파일 시스템에 손쉽게 접근 할 수 있지만 Deno는 명시적 복잡한 명령어를 통해 허용해야만 접근 가능하게 만들어 보안을 강화 시켰다.</li>
-<li>package.json 문제.<br>Javascript 프로그램에서 어떤 프로그램을 require 할때는 이 프로그램이 뭔지 모르기 때문에 package.json에 명시되어야 합니다. 이전에는 디렉터리 모듈 개념이 존재하지 않았기 때문에 웹에서 Javascript를 script 태그로 여기저기에 포함시켰어야 했습니다.<br>그에 따라서 탄생한게 NPM 모듈 패키지 입니다. 하지만 NPM같은 모듈 패키지도 단지 라이브러리를 연결 하고 싶은 것인데 회계장부 작성하듯이 작성하는것에 회의를 느끼게 되었습니다.<br>그리고 갈수록 node_Module이 커지는 큰 단점이 있었습니다. 로컬 프로젝트 폴더에 모듈이 설치되기 때문에 프로젝트가 많아질수록 모듈 관리 문제와 용량 증가로인한 무거움, 한 폴더에 모든 Module을 때려박는게 시멘틱에도 알맞지 않다고 생각.<br>때문에 Deno에선 생산적이고 안전한 스크립팅 환경을 위해 NPM 패키지 대신 ULR 또는 파일 경로를 참조해 모듈을 불러오는 시스템으로 변화했습니다.</li>
+<li>index.js.<br>웹 표준에 index.html이 있었기 때문에 그걸 따라 index.js를 만들면 귀여워 보여서 만들었는데 불필요한 도입이였다고 한다.<br>이로 인해 불필요하게 모듈 로딩 시스템을 복잡하게 만들었으며, package.json에 종속적이 되어 더욱 불필요한 방식이 되었다고 후회했다.  </li>
+<li>Promise 제거.<br>Promise를 만들었다가 제거했는데, 그로 인해 비동기 처리에 어려움을 겪었고 async/await 보급화를 좀 더 빨리 당길 수 있는것을 늦췄다.<br>현재 비동기 호출은 여전히 콜백 API 기준으로 되어 있어서 많은 문제점들을 노출시키고 있다.</li>
+<li>보안 취약.<br>모든 시스템 호출에 접근 할 수 있어 취약점이 노출되는 보안 문제가 있다.<br>그에 따라 보안 강화를 위해 Node JS는 C++로 만들어져 있으나 Rust로 대체.<br>따라서 Deno의 코드는 샌드박스를 통해 실행된다. Node의 경우엔 파일 시스템에 손쉽게 접근 할 수 있지만 Deno는 명시적 복잡한 명령어를 통해 허용해야만 접근 가능하게 만들어 보안을 강화 시켰다.<br><img src="https://user-images.githubusercontent.com/56964928/89679054-47d23100-d92b-11ea-8a35-0c77fd62d514.png" alt="캡처_2020_08_08_03_02_30_202"></li>
 </ol>
+<p>network acces 권한을 요구하고 있다.<br>4. package.json 문제.<br>Javascript 프로그램에서 어떤 프로그램을 require 할때는 이 프로그램이 뭔지 모르기 때문에 package.json에 명시되어야 한다. 이전에는 디렉터리 모듈 개념이 존재하지 않았기 때문에 웹에서 Javascript를 script 태그로 여기저기에 포함시켰어야 했었다.<br>그에 따라서 탄생한게 NPM 모듈 패키지 이다. 하지만 NPM같은 모듈 패키지도 단지 라이브러리를 연결 하고 싶은 것인데 회계장부 작성하듯이 작성하는것에 회의를 느끼게 되었다고한다.<br>그리고 갈수록 node_Module이 커지는 큰 단점이 있었다. 로컬 프로젝트 폴더에 모듈이 설치되기 때문에 프로젝트가 많아질수록 모듈 관리 문제와 알고리즘이 복잡해지고 용량 증가로인한 무거움, 한 폴더에 모든 Module을 때려박는게 시멘틱에도 알맞지 않다고 생각하게 되었다고 한다.<br>때문에 Deno에선 생산적이고 안전한 스크립팅 환경을 위해 NPM 패키지 대신 ULR 또는 파일 경로를 참조해 모듈을 불러오는 시스템으로 변화하게되었다.<br>5. 모듈 시스템(node_modules)</p>
 <ul>
-<li>그 외에도 Node.js 경우 포착되지 않은 오류 이후에도 실행을 계속 허용하여 예측 할 수 없는 결과를 발생시키지만 디노는 오류 발생시 항상 죽어버리게 설계해서 버그이지만 동작하는 상황이 없게 만듦.</li>
-<li>기본적으로 TypeScript가 내장되어있어서 노드때처럼 모듈 다운받고 설정할 필요 X.</li>
+<li>Require 문법을 쓸 때 express.js 같은 확장자 명을 안써도 되게 한 점.<br>편의성을위해 설계 했는데 오히려 브라우저내 자바스크립트가 작동하는 것과 표준이 달라서 모듈로더가 사용자의 의도를 파악하기 위해 많은 고민을 해야 했다.<br><img src="https://user-images.githubusercontent.com/56964928/89689496-7bb75180-d93f-11ea-826d-ff44afd32db3.png" alt="캡처_2020_08_08_06_21_27_646"></li>
 </ul>
+<p>require가 덕지덕지 붙어있는 app.js</p>
 <p><img src="https://user-images.githubusercontent.com/56964928/89679052-46a10400-d92b-11ea-8dae-2a7126a8506c.png" alt="캡처_2020_08_08_02_56_00_842"></p>
-<p>Node처럼 require를 사용하는게 아니라 url로 import를 한다.<br><img src="https://user-images.githubusercontent.com/56964928/89679054-47d23100-d92b-11ea-8a35-0c77fd62d514.png" alt="캡처_2020_08_08_03_02_30_202"></p>
-<p>network acces 권한을 요구하고 있다.<br><img src="https://user-images.githubusercontent.com/56964928/89679055-47d23100-d92b-11ea-8847-1568191c7648.png" alt="캡처_2020_08_08_03_11_34_108"></p>
+<p>Node처럼 require를 사용하는게 아니라 url로 import를 한다.</p>
+<ul>
+<li>그 외에도 Node.js 경우 포착되지 않은 오류 이후에도 실행을 계속 허용하여 예측 할 수 없는 결과를 발생시키지만 디노는 오류 발생시 항상 죽어버리게 설계해서 버그이지만 동작하는 상황이 없게 만들었다.</li>
+<li>기본적으로 TypeScript가 내장되어있어서 노드때처럼 모듈 다운받고 설정할 필요 X.</li>
+<li>Top level await는 aync가 생략 가능해서 aync를 제거해도 코드가 실행된다.</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/56964928/89679055-47d23100-d92b-11ea-8847-1568191c7648.png" alt="캡처_2020_08_08_03_11_34_108"></p>
 <p>async await을 쓰는 코드.<br><img src="https://user-images.githubusercontent.com/56964928/89679056-486ac780-d92b-11ea-9b2b-5473e51855b5.png" alt="캡처_2020_08_08_03_11_56_0"></p>
-<p>top level await는 aync가 생략 가능해서 aync를 제거해도 코드가 실행된다.</p>
-<p><img src="https://user-images.githubusercontent.com/56964928/89689496-7bb75180-d93f-11ea-826d-ff44afd32db3.png" alt="캡처_2020_08_08_06_21_27_646"></p>
-<p>require가 덕지덕지 붙어있는 index.js</p>
+<p>Top level await는 aync가 생략 가능해서 aync를 제거해도 코드가 실행된다.</p>
 
       
     </div>

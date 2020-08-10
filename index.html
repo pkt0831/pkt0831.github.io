@@ -174,7 +174,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-08-08 10:54:46" itemprop="dateModified" datetime="2020-08-08T10:54:46+09:00">2020-08-08</time>
+                <time title="Modified: 2020-08-10 17:20:53" itemprop="dateModified" datetime="2020-08-10T17:20:53+09:00">2020-08-10</time>
               </span>
 
           
@@ -217,12 +217,15 @@
 <p>network acces 권한을 요구하고 있다.</p>
 <p><img src="https://user-images.githubusercontent.com/56964928/89699917-7a991b00-d965-11ea-8b9f-3ef21fb0314f.png" alt="캡처_2020_08_08_10_53_54_101"><br>Network acces 권한을 허용하는 명령어를 같이 사용해야만 코드가 실행된다.<br>4. package.json 문제.</p>
 <ul>
-<li>Javascript 프로그램에서 어떤 프로그램을 require 할때는 이 프로그램이 뭔지 모르기 때문에 package.json에 명시되어야 한다. 이전에는 디렉터리 모듈 개념이 존재하지 않았기 때문에 웹에서 Javascript를 script 태그로 여기저기에 포함시켰어야 했었다고 한다.<br>그에 따라서 탄생한게 NPM 모듈 패키지 이다. 하지만 NPM같은 모듈 패키지도 단지 라이브러리를 연결 하고 싶은 것인데 회계장부 작성하듯이 작성하는것에 회의를 느끼게 되었다고한다.<br>그리고 갈수록 node_Module이 커지는 큰 단점이 있었다. 로컬 프로젝트 폴더에 모듈이 설치되기 때문에 프로젝트가 많아질수록 모듈 관리 문제와 알고리즘이 복잡해지고 용량 증가로인한 무거움, 한 폴더에 모든 Module을 때려박는게 시멘틱에도 알맞지 않다고 생각하게 되었다고 한다.<br>때문에 Deno에선 생산적이고 안전한 스크립팅 환경을 위해 NPM 패키지 대신 ULR 또는 파일 경로를 참조해 모듈을 불러오는 시스템으로 변화하게되었다.<br><img src="https://user-images.githubusercontent.com/56964928/89679052-46a10400-d92b-11ea-8dae-2a7126a8506c.png" alt="캡처_2020_08_08_02_56_00_842"></li>
+<li>Javascript 프로그램에서 어떤 프로그램을 require 할때는 이 프로그램이 뭔지 모르기 때문에 package.json에 명시되어야 한다. 이전에는 디렉터리 모듈 개념이 존재하지 않았기 때문에 웹에서 Javascript를 script 태그로 여기저기에 포함시켰어야 했었다고 한다.<br>그에 따라서 탄생한게 NPM 모듈 패키지 이다. 하지만 NPM같은 모듈 패키지도 단지 라이브러리를 연결 하고 싶은 것인데 회계장부 작성하듯이 작성하는것에 회의를 느끼게 되었다고한다.</li>
 </ul>
-<p>Node처럼 require를 사용하는게 아니라 url로 import를 하게 만들었다고 한다.</p>
 <ol start="5">
 <li>모듈 시스템(node_modules)</li>
 </ol>
+<ul>
+<li>NPM을 Install 하게 되면 node_modules 폴더에 설치되기 되는데 이것도 설계상의 실수라고 밝혔다. 모듈을 설치할수록  node_Module이 커지는 큰 단점이 있었다. 로컬 프로젝트 폴더에 모듈이 설치되기 때문에 프로젝트가 많아질수록 모듈 관리 문제와 알고리즘이 복잡해지고 용량 증가로인한 무거움, 한 폴더에 모든 Module을 때려박는게 시멘틱에도 알맞지 않다고 생각하게 되었다고 한다.<br>때문에 Deno에선 생산적이고 안전한 스크립팅 환경을 위해 NPM 패키지 대신 ULR 또는 파일 경로를 참조해 모듈을 불러오는 시스템으로 변화하게되었다.<br><img src="https://user-images.githubusercontent.com/56964928/89679052-46a10400-d92b-11ea-8dae-2a7126a8506c.png" alt="캡처_2020_08_08_02_56_00_842"></li>
+</ul>
+<p>Node처럼 require를 사용하는게 아니라 url로 import를 하게 만들었다고 한다.</p>
 <ul>
 <li>Require 문법을 쓸 때 express.js 같은 확장자 명을 안써도 되게 한 점.<br>편의성을위해 설계 했는데 오히려 브라우저내 자바스크립트가 작동하는 것과 표준이 달라서 모듈로더가 사용자의 의도를 파악하기 위해 많은 고민을 해야 했다.<br><img src="https://user-images.githubusercontent.com/56964928/89689496-7bb75180-d93f-11ea-826d-ff44afd32db3.png" alt="캡처_2020_08_08_06_21_27_646"></li>
 </ul>
